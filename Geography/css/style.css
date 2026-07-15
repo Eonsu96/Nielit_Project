@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap');
+/* @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'); */
+
+:root{
+  --sky:#eef8ff;
+  --green:#255b2d;
+  --leaf:#3e8f47;
+  --wood:#7b4d21;
+  --wood-dark:#5a3717;
+  --sun:#ffd447;
+  --sky-blue:#4aa8ff;
+  --rose:#ff6f91;
+  --violet:#8a63d2;
+  --card:rgba(255,255,255,.85);
+  --card-border:#c6c6c6;
+  --ink:#222;
+  --ink-soft:#4a4a4a;
+  --link:#0044dd;
+  --shadow:0 10px 20px rgba(0,0,0,.2);
+  --shadow-lg:0 18px 40px rgba(0,0,0,.28);
+  --radius:20px;
+  --radius-sm:14px;
+  --text-soft: #51607A;
+  --border: rgba(15, 23, 42, 0.09);
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:'Fredoka',sans-serif;
+  background:var(--sky);
+  color:var(--ink);
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+
+/* --------- nature background (from uploaded design) --------- */
+body::before{
+  content:'';
+  position:fixed;inset:0;
+  background:url('../images/bg_image.png') center/cover no-repeat;
+  filter:brightness(.82) saturate(1.05);
+  z-index:-2;
+}
+body::after{
+  content:'';
+  position:fixed;inset:0;
+  background:linear-gradient(180deg,rgba(255,255,255,.05) 0%,rgba(255,255,255,.18) 100%);
+  z-index:-1;
+}
+
+
+
+/* --------- header --------- */
+.site-header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 32px;
+  gap:16px;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;color:#fff;
+  text-decoration:none
+}
+.brand .earth{
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  background:radial-gradient(circle at 30% 30%,#7ed0ff 0%,#1c7fd6 55%,#0b4d94 100%);
+  box-shadow:0 6px 14px rgba(0,0,0,.35), inset -6px -8px 14px rgba(0,0,0,.25);
+  position:relative;overflow:hidden;
+  animation:spin 18s linear infinite;
+}
+.brand .earth::before,
+.brand .earth::after{
+  content:'';
+  position:absolute;
+  background:#2f9d3a;
+  border-radius:40% 60% 55% 45%/50% 40% 60% 50%;
+}
+.brand .earth::before{
+  width:60%;
+  height:35%;
+  top:22%;
+  left:10%;transform:rotate(-8deg)
+}
+
+.brand .earth::after{
+  width:40%;
+  height:28%;
+  top:55%;left:45%;
+  transform:rotate(15deg)
+}
+.brand-name{
+  font-family:'Baloo 2',sans-serif;
+  font-weight:800;
+  font-size:1.7rem;
+  line-height:1;
+  color:#fff;
+  text-shadow:0 2px 8px rgba(0,0,0,.35)
+}
+
+
+
+/* --------- hero title --------- */
+h1.page-title{
+  text-align:center;
+  color:var(--green);
+  font-family:'Baloo 2',sans-serif;
+  font-weight:800;
+  font-size:clamp(2rem,4vw,3rem);
+  margin:22px 16px 20px;
+  text-shadow:0 3px 0 rgba(255,255,255,.55), 0 4px 10px rgba(0,0,0,.15);
+}
+.subtitle{
+  text-align:center;
+  color:#fff;
+  text-shadow:0 2px 6px rgba(0,0,0,.4);
+  font-size:1.5rem;
+  margin:-8px 12px 20px;
+  font-weight:500
+}
+
+/* Module Sections */
+
+.p.subtitle{
+  text-align:center;
+
+}
+
+.tag-cloud{ 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 9px; 
+}
+
+.tag-chip{
+  font-family: var(--font-mono); 
+  font-size: 15px; 
+  padding: 9px 18px; 
+  border-radius: 999px;
+  border: 1px solid var(--border); 
+  background:var(--surface);
+  color: var(--text-soft);
+  transition: transform .25s ease, color .25s ease, border-color .25s ease;
+}
+
+.tag-chip:hover { 
+  border-color: var(--primary); 
+  color: var(--primary); 
+  transform: translateY(-2px); 
+}
+
+
+/* --------- glass frame --------- */
+.frame{
+  max-width:1300px;
+  margin:0 auto 40px;
+  padding:60px 60px 70px;
+  border-radius:25px;
+  background:rgba(255,255,255,.10);
+  border:2px solid rgba(255,255,255,.55);
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+  box-shadow:0 20px 60px rgba(0,0,0,.25);
+}
+.frame.narrow{
+    max-width:960px;
+    padding:44px 44px 52px
+}
+
+/* --------- card grid --------- */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+
+.card{
+  min-height:150px;
+  padding:22px 20px;
+  text-decoration:none;color:var(--ink);
+  background:var(--card);
+  border-radius:var(--radius);
+  border:2px solid var(--card-border);
+  display:flex;flex-direction:column;justify-content:center;align-items:center;
+  text-align:center;
+  box-shadow:var(--shadow);
+  transition:transform .3s ease, box-shadow .3s ease, background .3s;
+  position:relative;overflow:hidden;
+}
+.card:hover{transform:translateY(-8px) scale(1.03);box-shadow:var(--shadow-lg);background:#fff}
+.card h2{margin:0 0 6px;font-size:1.9rem;font-family:'Fredoka One', cursive; font-weight:700; color:var(--green);
+  display:flex;align-items:center;gap:12px}
+.card h2 i{font-size:2.1rem}
+.card p{margin:6px 0 8px;color:var(--ink-soft);font-size:.95rem}
+.card span.cta{color:var(--link);text-decoration:underline;font-weight:600}
+.card .badge{position:absolute;top:10px;right:12px;background:var(--sun);color:#5a3717;
+  padding:3px 10px;border-radius:20px;font-size:.72rem;font-weight:700}
+
+
+/* --------- wooden board ---------- */
+.board{
+  background:linear-gradient(180deg,#8d5a2b 0%,var(--wood) 65%,var(--wood-dark) 100%);
+  color:#fff8ec;
+  border-radius:16px;
+  padding:22px 20px;
+  box-shadow:0 10px 24px rgba(0,0,0,.38), inset 0 2px 0 rgba(255,255,255,.15);
+  border:3px solid #5a3717;
+  text-align:center;
+  font-family:'Baloo 2',sans-serif;
+}
+.board h3{margin:0 0 8px;font-size:1.4rem;color:#fff2c9}
+.board p{margin:2px 0;font-weight:600;letter-spacing:.03em}
+.board .stars{font-size:1.3rem;color:var(--sun);margin-top:6px}
+
+/* back link */
+.back-link{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:rgba(255,255,255,.85);
+  color:var(--green);border-radius:999px;text-decoration:none;font-weight:600;box-shadow:var(--shadow)}
+.back-link:hover{background:#fff}
+
+/* .video{
+  height:25px;
+  width:600px;
+} */
+
+ASTRONOMY CHIP DESIGN
+
+/* Grid */
+
+.card-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap: 20px;
+    align-items:start;
+}
+
+
+/* Card */
+
+.glass-card{
+    background:rgba(255,255,255,.10);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:20px;
+    overflow:hidden;
+    transition:.45s;
+    min-height:70px;
+}
+
+/* Expanded Card */
+
+.glass-card.active{
+    grid-column:1/-1;
+}
+
+/* Header */
+
+.glass-header{
+    width:100%;
+    border:none;
+    background:transparent;
+    color:white;
+    cursor:pointer;
+    padding:20px 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:24px;
+    font-weight:bold;
+}
+
+/* Content */
+
+.glass-content{
+    max-height:0;
+    opacity:0;
+    overflow:hidden;
+    transition:.45s;
+    padding:0 25px;
+    color:white;
+}
+
+.glass-card.active .glass-content{
+    max-height:1200px;
+    opacity:1;
+    padding:25px;
+}
+
+/* Image */
+
+.glass-content img{
+    width:100%;
+    max-width:500px;
+    display:block;
+    margin:auto;
+    border-radius:15px;
+}
+
+.arrow{
+    font-size:30px;
+    transition:.3s;
+}
+
+.glass-card.active .arrow{
+    transform:rotate(45deg);
+}
+

@@ -1,0 +1,91 @@
+/* ===== Global Styles ===== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: white;
+    color: black;
+}
+
+/* ===== Header ===== */
+header {
+    background-color: grey;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ===== Navigation ===== */
+nav {
+    background-color: brown;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 8px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Main Content ===== */
+main {
+    padding: 20px;
+    background-color: white;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+/* ===== Sections ===== */
+section {
+    margin-bottom: 25px;
+}
+
+/* ===== Tables ===== */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table th,
+table td {
+    border: 1px solid maroon;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: gold;
+}
+
+/* ===== Forms & Buttons ===== */
+form section {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: darkslategrey;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: brown;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: grey;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}

@@ -1,0 +1,71 @@
+.indexheader {
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: cursive, sans-serif;
+  color: #2e7d32;
+}
+.indexdiv {
+  /* border: 1px solid #000; */
+  max-height: 120px;
+  color: #000;
+  display: flex;
+  flex: 0 0 150px;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  font-weight: bold;
+  font-size: 1.125rem;
+  border-radius: 15px;
+  background: #bee8a5;
+  font-family: cursive, sans-serif;
+  color: #234;
+  box-shadow: 0 0 10px 5px #FFF8EC;
+}
+.indexcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  height: 600px;
+  padding: 10px;
+  margin: 20px auto;
+  align-content: space-evenly;
+  /* border: 1px solid #000; */
+  background-image: url(../images/backgrounds/mainbackground.png);
+  background-size: cover;
+  box-shadow: 0 0 20px 10px #A8DF8E;
+  border-radius: 20px;
+}
+.indexbody {
+  background: linear-gradient(to bottom,#FFF8EC,#99AD7A);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.indexdiv:hover {
+  background: #98d77a;
+}
+.indexh2::before {
+  content: "🦋";
+}
+.indexh22::before {
+  content: "🦋";
+}
+.indexdiv2 {
+  flex-grow: 1;
+}
+.indexdiv1 {
+  flex-grow: 1;
+}
+.indexdiv3 {
+  flex-grow: 0.2;
+}
+.indexdiv4 {
+  flex-grow: 0.2;
+}
+/* .indexh1::before {
+  content: "🌿 ";
+}
+.indexh1::after {
+  content: " 🌿";
+} */

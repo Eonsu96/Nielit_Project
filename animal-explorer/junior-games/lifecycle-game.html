@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Life Cycle Game</title>
+
+    <link rel="stylesheet"
+          href="../assets/css/junior-games.css">
+
+</head>
+
+<body>
+
+<header class="junior-header">
+
+    <h1 class="junior-h1">
+        Arrange the Life Cycle
+    </h1>
+
+    <a class="junior-anchor"
+       href="../index.html">
+        Homepage
+    </a>
+
+    <a class="junior-anchor"
+       href="index.html">
+        Games
+    </a>
+
+</header>
+
+<p class="junior-para">
+
+    Drag the stages into the correct order.
+
+</p>
+
+<h2 id="cycleTitle">
+
+    Life Cycle 1 of 5
+
+</h2>
+
+<h2 id="score">
+
+    Score : 0 / 17
+
+</h2>
+
+
+<div class="order-container">
+
+    <div class="order-box"
+         data-stage="1">
+
+        Drop Here
+
+    </div>
+
+    <div class="order-box"
+         data-stage="2">
+
+        Drop Here
+
+    </div>
+
+    <div class="order-box"
+         data-stage="3">
+
+        Drop Here
+
+    </div>
+
+    <div class="order-box"
+         data-stage="4">
+
+        Drop Here
+
+    </div>
+
+</div>
+
+
+<h2 class="drag-title">
+
+    Drag These
+
+</h2>
+
+<div class="drag-container"
+     id="dragContainer">
+
+    <!-- JavaScript loads the stages here -->
+
+</div>
+
+
+<div style="text-align:center; margin-top:30px;">
+
+    <button id="nextButton"
+            style="display:none;">
+
+        Next Life Cycle ▶
+
+    </button>
+
+</div>
+
+
+<h2 id="message"></h2>
+
+
+<audio id="correctSound">
+
+    <source src="../assets/sounds/correct.mp3"
+            type="audio/mpeg">
+
+</audio>
+
+
+<audio id="wrongSound">
+
+    <source src="../assets/sounds/wrong.mp3"
+            type="audio/mpeg">
+
+</audio>
+
+
+<audio id="winSound">
+
+    <source src="../assets/sounds/win.mp3"
+            type="audio/mpeg">
+
+</audio>
+<!-- Wrong Answer -->
+<div id="customAlert" class="custom-alert">
+    <div class="alert-box">
+        <p id="alertText"></p>
+        <button onclick="closeAlert()">OK</button>
+    </div>
+</div>
+<script src="../assets/javascript/junior-games-lifecycle-order.js"></script>
+
+</body>
+
+</html>

@@ -1,88 +1,87 @@
-/* JUNIOR-ZOOLOGISTS ANIMAL-GROUPS.HTML */
-.groups-header {
-    text-align: center;
-    font-size: 1.125rem;
+body {
+    background-image: url(../images/backgrounds/junior-background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: cursive, sans-serif;
-    color: #4caf50;
 }
-.groups-anchor {
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+h1 {
+    font-size: 40px;
+    color: #256a2b;
+}
+h2, h3 {
+    color: #256a2b;
+}
+a {
+    text-decoration: none;
     font-size: 26px;
-    font-weight: bold;
     margin: 0 10px 0;
+    padding: 10px;
     box-shadow: 0 0 10px 5px #fff8ec;
-    padding: 2px;
     background-color: #bee8a5;
+    font-weight: bold;
 }
-.groups-anchor:hover {
+a:hover {
     background-color: #98d77a;
 }
-.groups1-para {
-    color: #2f4f2f;
-}
-.groups-container1 {
-    text-align: center;
-    font-size: 26px;
-    font-family: cursive, sans-serif;
-    font-weight: bold;
-    color: #2e7d68;
-}
-.groups-div {
-    /* border: 1px solid #000; */
+.side-container {
     display: flex;
+    width: 50%;
     flex-direction: column;
+    align-items: center;
+    margin-left: 200px;
     font-size: 26px;
     font-weight: bold;
-    font-family: cursive, sans-serif;
-    color: #2f4f2f;
-    flex: 0 0 1100px;
-    margin: 20px;
-    align-items: center;
-    border-radius: 20px;
-    box-shadow: 0 0 10px 5px #F2F8E9;
-    background: linear-gradient(to bottom,#F2F8E9, #D7EBC8);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    color: #203848;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px 5px;
+    border-radius: 10px;
 }
-.groups-container2 {
-    /* border: 1px solid #000; */
-    width: 70%;
-    margin: 20px auto;
-    padding: 10px;
+.side-container-h2 {
+    color: #256a2b;
+    text-align:left;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 300px;
+}
+.main-container {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    margin: 20px auto;
     justify-content: center;
 }
-.animal-groups {
-    background-image: url(../images/backgrounds/junior.png);
+.card-container {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 900px;
+    margin: 20px;
+    align-items: center;
+    box-shadow: 0 0 10px 5px;
+    background: linear-gradient(to bottom, #f5f1e5, #7f9563);
     background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 26px;
+    color: #203848;
 }
-.groups-div-h2 {
-    color: #4f8a3b;
+.container-h2 {
+    color: #256a2b;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
 }
-.groups-div-para {
-    color: #5e7f3b;
+.container-para {
+    color: #203848;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
 }
-.groups-h1::before {
-    content: "🐾 ";
-}
-.mammals::before {
-    content: "🦁 ";
-}
-.birds::before {
-    content: "🐦 ";
-}
-.fish::before {
-    content: "🐠 ";
-}
-.reptiles::before {
-    content: "🐍 ";
-}
-.amphibians::before {
-    content: "🐸 ";
-}
-.insects::before {
-    content: "🦋 ";
+.imp {
+    background-color: #C6E8B4;
 }

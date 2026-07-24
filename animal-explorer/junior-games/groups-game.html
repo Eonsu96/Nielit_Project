@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groups Game</title>
+
+    <link rel="stylesheet" href="../assets/css/junior-games.css">
+</head>
+
+<body>
+
+    <header class="junior-header">
+        <h1 class="junior-h1">Match each animals to its correct groups</h1>
+
+        <a class="junior-anchor" href="../../index.html">Homepage</a>
+        <a class="junior-anchor" href="index.html">Games</a>
+    </header>
+
+    <p class="junior-para">
+        Drag the correct group onto each picture.
+    </p>
+
+    <h2 id="score">Score : 0 / 6</h2>
+
+    <div class="junior-container">
+
+        <!-- Lion -->
+        <div class="junior-div">
+            <img src="../assets/images/animals/lion-mammal.jpg" alt="Lion"
+                class="junior-image">
+
+            <div class="drop-zone"
+                data-answer="mammal">
+                Drop Here
+            </div>
+        </div>
+
+        <!-- Duck -->
+        <div class="junior-div">
+            <img src="../assets/images/animals/duck-bird.jpg" alt="Duck"
+                class="junior-image">
+
+            <div class="drop-zone"
+                data-answer="bird">
+                Drop Here
+            </div>
+        </div>
+
+        <!-- Snake -->
+        <div class="junior-div">
+            <img src="../assets/images/animals/snake-reptile.jpg" alt="Snake"
+                class="junior-image">
+
+            <div class="drop-zone"
+                data-answer="reptile">
+                Drop Here
+            </div>
+        </div>
+
+        <!-- Amphibian -->
+        <div class="junior-div">
+            <img src="../assets/images/animals/frog-amphibian.jpg" alt="Amphibian"
+                class="junior-image">
+
+            <div class="drop-zone"
+                data-answer="amphibian">
+                Drop Here
+            </div>
+        </div>
+
+        <!-- Fish -->
+        <div class="junior-div">
+            <img src="../assets/images/animals/goldfish-fish.jpg" alt="Fish"
+                class="junior-image">
+
+            <div class="drop-zone"
+                data-answer="fish">
+                Drop Here
+            </div>
+        </div>
+
+        <!-- Insect -->
+        <div class="junior-div">
+            <img src="../assets/images/animals/butterfly-insect.jpg" alt="Insect"
+                class="junior-image">
+
+            <div class="drop-zone"
+                data-answer="insect">
+                Drop Here
+            </div>
+        </div>
+
+    </div>
+
+    <h2 class="drag-title">
+        Drag These Groups 
+    </h2>
+
+    <div class="drag-container">
+
+        <div class="drag-item"
+            draggable="true"
+            data-name="mammal">
+            Mammal
+        </div>
+
+        <div class="drag-item"
+            draggable="true"
+            data-name="bird">
+            Bird
+        </div>
+
+        <div class="drag-item"
+            draggable="true"
+            data-name="reptile">
+            Reptile
+        </div>
+
+        <div class="drag-item"
+            draggable="true"
+            data-name="amphibian">
+            Amphibian
+        </div>
+
+        <div class="drag-item"
+            draggable="true"
+            data-name="fish">
+            Fish
+        </div>
+
+        <div class="drag-item"
+            draggable="true"
+            data-name="insect">
+            Insect
+        </div>
+
+    </div>
+
+    <h2 id="message"></h2>
+
+    <!-- Sounds -->
+    <audio id="correctSound">
+        <source src="../assets/sounds/correct.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="wrongSound">
+        <source src="../assets/sounds/wrong.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="winSound">
+        <source src="../assets/sounds/win.mp3" type="audio/mpeg">
+    </audio>
+    <!-- Wrong Answer -->
+     <div id="customAlert" class="custom-alert">
+    <div class="alert-box">
+        <p id="alertText"></p>
+        <button onclick="closeAlert()">OK</button>
+    </div>
+</div>
+
+    <script src="../assets/javascript/general-games-match.js"></script>
+
+</body>
+
+</html>

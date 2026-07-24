@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Sound Game</title>
+
+    <link rel="stylesheet" href="../assets/css/tiny-games.css">
+</head>
+
+<body class="tiny-game">
+
+    <header class="tiny-header">
+        <h1 class="tiny-h1">Match the Animal to its Sound</h1>
+
+        <a class="tiny-anchor" href="../../index.html">Homepage</a>
+        <a class="tiny-anchor" href="index.html">Games</a>
+    </header>
+
+    <p class="tiny-para">
+        Drag the correct sound onto each picture.
+    </p>
+
+    <h2 id="score">Score : 0 / 6</h2>
+
+    <div class="tiny-container">
+
+        <!-- Lion -->
+        <div class="tiny-div">
+            <img src="../assets/images/animals/roar.png" alt="Lion"
+                class="tiny-image">
+
+            <div class="drop-zone"
+                data-answer="roar">
+                Drop Here
+            </div>
+        </div>
+
+        <!-- Elephant -->
+        <div class="tiny-div">
+            <img src="../assets/images/animals/trumpet.png" alt="Elephant"
+                class="tiny-image">
+
+            <div class="drop-zone"
+                data-answer="trumpet">
+                Drop Here
+            </div>
+        </div>
+
+        <!-- Cow -->
+        <div class="tiny-div">
+            <img src="../assets/images/animals/moo.png" alt="Cow"
+                class="tiny-image">
+
+            <div class="drop-zone"
+                data-answer="moo">
+                Drop Here
+            </div>
+        </div>
+
+        <!-- Dog -->
+        <div class="tiny-div">
+            <img src="../assets/images/animals/bark.png" alt="Dog"
+                class="tiny-image">
+
+            <div class="drop-zone"
+                data-answer="bark">
+                Drop Here
+            </div>
+        </div>
+
+        <!-- Duck -->
+        <div class="tiny-div">
+            <img src="../assets/images/animals/quack.png" alt="Duck"
+                class="tiny-image">
+
+            <div class="drop-zone"
+                data-answer="quack">
+                Drop Here
+            </div>
+        </div>
+
+        <!-- Owl -->
+        <div class="tiny-div">
+            <img src="../assets/images/animals/hoot.png" alt="Owl"
+                class="tiny-image">
+
+            <div class="drop-zone"
+                data-answer="hoot">
+                Drop Here
+            </div>
+        </div>
+
+    </div>
+
+    <h2 class="drag-title">
+        Drag These Sounds
+    </h2>
+
+    <div class="drag-container">
+
+        <div class="drag-item"
+            draggable="true"
+            data-name="roar">
+            Roar
+        </div>
+
+        <div class="drag-item"
+            draggable="true"
+            data-name="trumpet">
+            Trumpet
+        </div>
+
+        <div class="drag-item"
+            draggable="true"
+            data-name="moo">
+            Moo
+        </div>
+
+        <div class="drag-item"
+            draggable="true"
+            data-name="bark">
+            Bark
+        </div>
+
+        <div class="drag-item"
+            draggable="true"
+            data-name="quack">
+            Quack
+        </div>
+
+        <div class="drag-item"
+            draggable="true"
+            data-name="hoot">
+            Hoot
+        </div>
+
+    </div>
+
+    <h2 id="message"></h2>
+
+    <!-- Sounds -->
+    <audio id="correctSound">
+        <source src="../assets/sounds/correct.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="wrongSound">
+        <source src="../assets/sounds/wrong.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="winSound">
+        <source src="../assets/sounds/win.mp3" type="audio/mpeg">
+    </audio>
+    <!-- Wrong Answer -->
+     <div id="customAlert" class="custom-alert">
+    <div class="alert-box">
+        <p id="alertText"></p>
+        <button onclick="closeAlert()">OK</button>
+    </div>
+</div>
+
+    <script src="../assets/javascript/general-games-match.js"></script>
+
+</body>
+
+</html>

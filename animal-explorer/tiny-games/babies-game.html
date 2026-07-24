@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Babies Game</title>
+
+    <link rel="stylesheet" href="../assets/css/tiny-games.css">
+</head>
+
+<body class="tiny-game">
+
+    <header class="tiny-header">
+        <h1 class="tiny-h1">Match the Animal with its Baby Name</h1>
+
+        <a class="tiny-anchor" href="../../index.html">Homepage</a>
+        <a class="tiny-anchor" href="index.html">Games</a>
+    </header>
+
+    <p class="tiny-para">
+        Drag the correct baby name onto each picture.
+    </p>
+
+    <h2 id="score">Score : 0 / 6</h2>
+
+    <div class="tiny-container">
+
+        <!-- Lion -->
+        <div class="tiny-div">
+            <img src="../assets/images/animals/cub.png" alt="Cub"
+                class="tiny-image">
+
+            <div class="drop-zone"
+                data-answer="cub">
+                Drop Here
+            </div>
+        </div>
+
+        <!-- Cow -->
+        <div class="tiny-div">
+            <img src="../assets/images/animals/cow-calf.png" alt="Cow-Calf"
+                class="tiny-image">
+
+            <div class="drop-zone"
+                data-answer="calf1">
+                Drop Here
+            </div>
+        </div>
+
+        <!-- Dog -->
+        <div class="tiny-div">
+            <img src="../assets/images/animals/puppy.png" alt="Puppy"
+                class="tiny-image">
+
+            <div class="drop-zone"
+                data-answer="puppy">
+                Drop Here
+            </div>
+        </div>
+
+        <!-- Duck -->
+        <div class="tiny-div">
+            <img src="../assets/images/animals/duckling.png" alt="Duckling"
+                class="tiny-image">
+
+            <div class="drop-zone"
+                data-answer="duckling">
+                Drop Here
+            </div>
+        </div>
+
+        <!-- Elephant -->
+        <div class="tiny-div">
+            <img src="../assets/images/animals/ele-calf.png" alt="Elephant-Calf"
+                class="tiny-image">
+
+            <div class="drop-zone"
+                data-answer="calf2">
+                Drop Here
+            </div>
+        </div>
+
+        <!-- Owl -->
+        <div class="tiny-div">
+            <img src="../assets/images/animals/owlet.png" alt="Owlet"
+                class="tiny-image">
+
+            <div class="drop-zone"
+                data-answer="owlet">
+                Drop Here
+            </div>
+        </div>
+
+    </div>
+
+    <h2 class="drag-title">
+        Drag These Baby Names
+    </h2>
+
+    <div class="drag-container">
+
+        <div class="drag-item"
+            draggable="true"
+            data-name="cub">
+            Cub
+        </div>
+
+        <div class="drag-item"
+            draggable="true"
+            data-name="calf1">
+            Cow Calf
+        </div>
+
+        <div class="drag-item"
+            draggable="true"
+            data-name="puppy">
+            Puppy
+        </div>
+
+        <div class="drag-item"
+            draggable="true"
+            data-name="duckling">
+            Duckling
+        </div>
+
+        <div class="drag-item"
+            draggable="true"
+            data-name="calf2">
+            Calf
+        </div>
+
+        <div class="drag-item"
+            draggable="true"
+            data-name="owlet">
+            Owlet
+        </div>
+
+    </div>
+
+    <h2 id="message"></h2>
+
+    <!-- Sounds -->
+    <audio id="correctSound">
+        <source src="../assets/sounds/correct.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="wrongSound">
+        <source src="../assets/sounds/wrong.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="winSound">
+        <source src="../assets/sounds/win.mp3" type="audio/mpeg">
+    </audio>
+    <!-- Wrong Answer -->
+     <div id="customAlert" class="custom-alert">
+    <div class="alert-box">
+        <p id="alertText"></p>
+        <button onclick="closeAlert()">OK</button>
+    </div>
+</div>
+
+    <script src="../assets/javascript/general-games-match.js"></script>
+
+</body>
+
+</html>

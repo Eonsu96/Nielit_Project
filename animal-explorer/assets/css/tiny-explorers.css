@@ -1,147 +1,44 @@
-/* TINY EXPLORERS-INDEX.HTML */
-.tinyheader {
-    text-align: center;
-    bottom-margin: 20px;
+body {
+    background-image: url(../images/backgrounds/tiny-background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: cursive, sans-serif;
+}
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+h1 {
+    font-size: 40px;
     color: #2e7d32;
 }
-.tinydivs:hover {
-    background: #98d77a;
+h1::before {
+    content: "🦁🐘🐮 ";
 }
-.tinydivs {
-    /* border: 1px solid #000; */
-    display: flex;
-    font-weight: bold;
-    font-size: 1.125rem;
-    max-height: 120px;
-    border-radius: 10px;
-    flex-direction: column;
-    flex: 0 0 350px;
-    align-items: center;
-    margin: 10px;
+h1::after {
+    content: " 🐶🦆🦉";
+}
+h2, h3 {
+    color: #2e7d32;
+}
+a {
+    text-decoration: none;
+    font-size: 26px;
+    margin: 0 10px 0;
+    padding: 10px;
     box-shadow: 0 0 10px 5px #fff8ec;
     background-color: #bee8a5;
-    color: #234;
-    font-family: cursive, sans-serif;
+    font-weight: bold;
 }
-.tinycontainer {
-    display: flex;
-    flex-wrap: wrap;
-    width: 70%;
-    height: 600px;
-    /* border: 1px solid #000; */
-    margin: 20px auto;
-    border-radius: 20px;
-    padding: 10px;
-    align-content: space-evenly;
-    justify-content: center;
-    background-image: url(../images/backgrounds/mainbackground.png);
-    background-size: contain;
-    background-attachment: fixed;
-    background-repeat: repeat-x;
-    box-shadow: 0 0 20px 10px #A8DF8E;
+a:hover {
+    background-color: #98d77a;
 }
-.tinyindex {
-  background: linear-gradient(to bottom,#FFF8EC,#99AD7A);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-.tinyh1::before {
-    content: "🦋 "
-}
-.tinyh1::after {
-    content: " 🦋"
-}
-
-/* TINY EXPLORERS-ANIMAL-HOMES.HTML */
-.homeimg {
+img {
     width: 400px;
     border-radius: 10px;
 }
-.homeheader {
-    text-align: center;
-    margin-bottom: 20px;
-    font-weight: bold;
-    font-family: cursive, sans-serif;
-    color: #2e7d32;
-    font-size: 1.125rem;
-}
-.homeanchor {
-    background: #bee8a5;
-    margin: 0 10px 0;
-    padding: 2px;
-    box-shadow: 0 0 10px 5px #FFF8EC;
-    font-size: 26px;
-}
-.homeanchor:hover {
-    background: #98d77a;
-}
-.homediv {
-    display: flex;
-    margin: 20px;
-    flex-direction: column;
-    align-items: center;
-    font-weight: bold;
-    font-size: 26px;
-    font-family: cursive, sans-serif;
-    box-shadow: 0 0 10px 5px #FFF8EC;
-    color: #234;
-    background: linear-gradient(to bottom,#fff8ec,#99ad7a);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
-.homecontainer {
-    width: 70%;
-    margin: 20px auto;
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.homecontainer::after {
-    content: "";
-    width: 400px;
-    margin: 20px;
-}
-.animalhome {
-    background-image: url(../images/backgrounds/background.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: left;
-}
-.homeh1::before {
-    content: "🦁🐘🐮 ";
-}
-.homeh1::after {
-    content: " 🐶🦆🦉"
-}
-/* TINY EXPLORERS-ANIMAL-SOUNDS.HTML */
-.soundimg {
-    width: 400px;
-    border-radius: 10px;
-}
-.soundheader {
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 20px;
-    font-size: 1.125rem;
-    font-family: cursive, sans-serif;
-    color: #2e7d32;
-}
-.soundanchor {
-    background: #bee8a5;
-    margin: 0 10px 0;
-    padding: 2px;
-    box-shadow: 0 0 10px 5px #FFF8EC;
-    font-size: 26px;
-}
-.soundanchor:hover {
-    background: #98d77a;
-}
-.sounddiv {
+.container-div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -155,8 +52,15 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    border-radius: 10px;
 }
-.soundcontainer {
+.food-div-extra {
+    flex: 1 0 400px;
+}
+.intro-div-extra {
+    flex: 0 0 350px;
+}
+.container {
     width: 70%;
     display: flex;
     flex-wrap: wrap;
@@ -164,237 +68,29 @@
     justify-content: center;
     padding: 10px;
 }
-.animalsound {
-    background-image: url(../images/backgrounds/background.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: left;
-    background-size: cover;
-}
-.soundh1::before {
-    content: "🦁🐘🐮 ";
-}
-.soundh1::after {
-    content: " 🐶🦆🦉"
-}
-/* TINY EXPLORERS-FOOD-HABITS.HTML */
-.foodimg {
-    width: 400px;
-}
-.foodheader {
-    text-align: center;
-    margin-bottom: 20px;
-    font-family: cursive, sans-serif;
-    font-size: 1.125rem;
-    font-weight: bold;
-    color: #2e7d32;
-}
-.fooddiv {
-    /* border: 1px solid #000; */
-    margin: 20px;
-    font-family: cursive, sans-serif;
-    font-size: 26px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #234;
-    font-weight: bold;
-    flex: 1 1 400px;
-    box-shadow: 0 0 10px 5px #FFF8EC;
-    border-radius: 10px;
-    background: linear-gradient(to bottom,#fff8ec,#99ad7a);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
-.foodcontainer {
-    /* border: 1px solid #000; */
-    width: 70%;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 20px auto;
-    padding: 10px;
-    justify-content: center;
-}
-.habitdiv {
-    /* border: 1px solid #000; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-    font-size: 26px;
-    font-weight: bold;
-    color: #234;
-    box-shadow: 0 0 10px 5px #FFF8EC;
-    border-radius: 10px;
-    background: linear-gradient(to bottom,#fff8ec,#99ad7a);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
-.habitcontainer {
-    /* border: 1px solid #000; */
+.food-habit-container {
     width: 80%;
     margin: 10px auto;
     display: flex;
     flex-direction: column;
     padding: 10px;
 }
-.foodhabit {
-    background-image: url(../images/backgrounds/background.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
-.foodh2 {
-    color: #2e7d32;
-}
-.foodanchor {
-    background: #bee8a5;
-    margin: 0 10px 0;
-    padding: 2px;
-    box-shadow: 0 0 10px 5px #FFF8EC;
-    font-size: 26px;
-}
-.foodanchor:hover {
-    background:  #98d77a;
-}
-.foodh1::before {
-    content: "🦁🐘🐮 ";
-}
-.foodh1::after {
-    content: " 🐶🦆🦉"
-}
-.lion-food::after {
-    content: " 🥩";
-}
-.ele-grass::after {
-    content: " 🌿";
-}
-.ele-leaves::after {
-    content: " 🍃";
-}
-.ele-fruits::after {
-    content: " 🍎";
-}
-.cow-grass::after {
-    content: " 🌱";
-}
-.cow-hay::after {
-    content: " 🌾";
-}
-.dog-meat::after {
-    content: " 🍗";
-}
-.duck-seeds::after {
-    content: " 🌾";
-}
-.duck-insects::after {
-    content: " 🐞";
-}
-.duck-plants::after {
-    content: " 🌿";
-}
-.owl-mice::after {
-    content: " 🐭";
-}
-.owl-insects::after {
-    content: " 🦗";
-}
-/* TINY-EXPLORERS  -  ANIMAL-BABIES.HTML */
-.babies-image {
-    width: 500px;
-    border-radius: 10px;
-}
-.babies-header {
-    text-align: center;
-    margin-bottom: 10px;
-    font-size: 1.125rem;
-    font-family: cursive, sans-serif;
-    color: #2e7d32;
-}
-.babies-h1::before {
-    content: "🦁🐘🐮 ";
-}
-.babies-h1::after {
-    content: " 🐶🦆🦉"
-}
-.babies-anchor {
-    font-weight: bold;
-    background-color: #bee8a5;
-    font-size: 26px;
-    margin: 0 10px 0;
-    padding: 2px;
-    box-shadow: 0 0 10px 5px #fff8ec;
-}
-.babies-anchor:hover {
-    background-color: #98d77a;
-}
-.babies-div {
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-weight: bold;
-    font-family: cursive, sans-serif;
-    font-size: 40px;
-    color: #234;
-    box-shadow: 0 0 10px 5px #fff8ec;
-    border-radius: 10px;
-    background: linear-gradient(to bottom,#fff8ec,#99ad7a);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
-.babies-container {
-    width: 70%;
-    margin: 20px auto;
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.animal-babies {
-    background-image: url(../images/backgrounds/background.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: left;
-}
-/* TINY-EXPLORERS ANIMAL-INTRO.HTML */
-.intro-header {
-    text-align: center;
-    margin-bottom: 20px;
-    font-weight: bold;
-    font-size: 1.125rem;
-    font-family: cursive, sans-serif;
-    color: #2e7d32;
-}
-.intro-anchor {
-    font-size: 26px;
-    margin: 0 10px 0;
-    background-color: #bee8a5;
-    box-shadow: 0 0 10px 5px #fff8ec;
-}
-.intro-anchor:hover {
-    background-color: #98d77a;
-}
-.intro-heading {
-    font-weight: bold;
+.intro-h2 {
     font-size: 30px;
-    font-family: cursive, sans-serif;
-    border-radius: 10px;
-    text-align: center;
+    margin-left: 300px;
 }
-.intro-para2 {
+.intro-para {
+    display: flex;
+    box-shadow: 0 0 10px 5px #fff8ec;
     color: #234;
+    font-weight: bold;
+    font-size: 26px;
+    width: 50%;
+    margin-left: 200px;
+    border-radius: 10px;
+    background-color: #bee8a5;
 }
-.intro-para1 {
-    color: #2e7d32;
-}
-.intro-animal {
-    background-image: url(../images/backgrounds/background.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+.intro-h2-main {
+    font-size: 30px;
+    text-align: center;
 }

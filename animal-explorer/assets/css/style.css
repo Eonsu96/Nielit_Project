@@ -1,18 +1,16 @@
 .indexheader {
   text-align: center;
-  margin-bottom: 10px;
-  font-family: cursive, sans-serif;
+  margin-bottom: 20px;
   color: #2e7d32;
 }
 .indexdiv {
-  /* border: 1px solid #000; */
   max-height: 120px;
   color: #000;
   display: flex;
-  flex: 0 0 150px;
+  flex: 0 0 250px;
   flex-direction: column;
   align-items: center;
-  margin: 10px;
+  margin: 20px;
   font-weight: bold;
   font-size: 1.125rem;
   border-radius: 15px;
@@ -28,8 +26,8 @@
   height: 600px;
   padding: 10px;
   margin: 20px auto;
-  align-content: space-evenly;
-  /* border: 1px solid #000; */
+  justify-content: center;
+  align-items: center;
   background-image: url(../images/backgrounds/mainbackground.png);
   background-size: cover;
   box-shadow: 0 0 20px 10px #A8DF8E;
@@ -40,6 +38,7 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  font-family: cursive, sans-serif;
 }
 
 .indexdiv:hover {
@@ -51,21 +50,18 @@
 .indexh22::before {
   content: "🦋";
 }
-.indexdiv2 {
-  flex-grow: 1;
-}
-.indexdiv1 {
-  flex-grow: 1;
-}
-.indexdiv3 {
-  flex-grow: 0.2;
-}
-.indexdiv4 {
-  flex-grow: 0.2;
-}
-/* .indexh1::before {
+.indexh1::before {
   content: "🌿 ";
 }
 .indexh1::after {
   content: " 🌿";
-} */
+}
+a {
+    text-decoration: none;
+}
+.extra {
+flex-grow: 0.5;
+}
+.space {
+  flex-grow: 0.3;
+}

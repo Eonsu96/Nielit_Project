@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaptations Game</title>
+
+    <link rel="stylesheet" href="../assets/css/junior-games.css">
+</head>
+
+<body>
+
+    <header class="junior-header">
+        <h1 class="junior-h1">Match each animals to its special adaptation</h1>
+
+        <a class="junior-anchor" href="../../index.html">Homepage</a>
+        <a class="junior-anchor" href="index.html">Games</a>
+    </header>
+
+    <p class="junior-para">
+        Drag the correct adaptation onto each picture.
+    </p>
+
+    <h2 id="score">Score : 0 / 6</h2>
+
+    <div class="junior-container">
+
+        <!-- Duck -->
+        <div class="junior-div">
+            <img src="../assets/images/animals/duck-webbedfeet.jpg" alt="Duck"
+                class="junior-image">
+
+            <div class="drop-zone"
+                data-answer="webbed-feet">
+                Drop Here
+            </div>
+        </div>
+
+        <!-- Camel -->
+        <div class="junior-div">
+            <img src="../assets/images/animals/camel-desert.jpg" alt="Camel"
+                class="junior-image">
+
+            <div class="drop-zone"
+                data-answer="hump">
+                Drop Here
+            </div>
+        </div>
+
+        <!-- Polar Bear -->
+        <div class="junior-div">
+            <img src="../assets/images/animals/polarbear-polarregion.jpg" alt="Polar Bear"
+                class="junior-image">
+
+            <div class="drop-zone"
+                data-answer="thick-fur">
+                Drop Here
+            </div>
+        </div>
+
+        <!-- Giraffe -->
+        <div class="junior-div">
+            <img src="../assets/images/animals/giraffe-grassland.jpg" alt="Giraffe"
+                class="junior-image">
+
+            <div class="drop-zone"
+                data-answer="long-neck">
+                Drop Here
+            </div>
+        </div>
+
+        <!-- Fish -->
+        <div class="junior-div">
+            <img src="../assets/images/animals/fish-gills.jpg" alt="Fish"
+                class="junior-image">
+
+            <div class="drop-zone"
+                data-answer="gills">
+                Drop Here
+            </div>
+        </div>
+
+        <!-- Owl -->
+        <div class="junior-div">
+            <img src="../assets/images/animals/owl-largeeyes.jpg" alt="Owl"
+                class="junior-image">
+
+            <div class="drop-zone"
+                data-answer="large-eyes">
+                Drop Here
+            </div>
+        </div>
+
+    </div>
+
+    <h2 class="drag-title">
+        Drag These Adaptations 
+    </h2>
+
+    <div class="drag-container">
+
+        <div class="drag-item"
+            draggable="true"
+            data-name="webbed-feet">
+            Webbed feet
+        </div>
+
+        <div class="drag-item"
+            draggable="true"
+            data-name="hump">
+            Hump
+        </div>
+
+        <div class="drag-item"
+            draggable="true"
+            data-name="thick-fur">
+            Thick fur
+        </div>
+
+        <div class="drag-item"
+            draggable="true"
+            data-name="long-neck">
+            Long neck
+        </div>
+
+        <div class="drag-item"
+            draggable="true"
+            data-name="gills">
+            Gills
+        </div>
+
+        <div class="drag-item"
+            draggable="true"
+            data-name="large-eyes">
+            Large eyes
+        </div>
+
+    </div>
+
+    <h2 id="message"></h2>
+
+    <!-- Sounds -->
+    <audio id="correctSound">
+        <source src="../assets/sounds/correct.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="wrongSound">
+        <source src="../assets/sounds/wrong.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="winSound">
+        <source src="../assets/sounds/win.mp3" type="audio/mpeg">
+    </audio>
+    <!-- Wrong Answer -->
+     <div id="customAlert" class="custom-alert">
+    <div class="alert-box">
+        <p id="alertText"></p>
+        <button onclick="closeAlert()">OK</button>
+    </div>
+</div>
+
+    <script src="../assets/javascript/general-games-match.js"></script>
+
+</body>
+
+</html>

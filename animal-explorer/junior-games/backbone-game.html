@@ -4,11 +4,13 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Vertebrates and Invertebrates Game</title>
 
-    <link rel="stylesheet" href="../assets/css/junior-games.css">
+    <link rel="stylesheet"
+          href="../assets/css/junior-games.css">
 
 </head>
 
@@ -16,23 +18,30 @@
 
 <header class="junior-header">
 
-<h1 class="junior-h1">
-Vertebrates and Invertebrates
-</h1>
+    <h1 class="junior-h1">
+        Vertebrates and Invertebrates
+    </h1>
 
-<a class="junior-anchor" href="../index.html">Homepage</a>
+    <a class="junior-anchor"
+       href="../index.html">
+        Homepage
+    </a>
 
-<a class="junior-anchor" href="index.html">Games</a>
+    <a class="junior-anchor"
+       href="index.html">
+        Games
+    </a>
 
 </header>
 
 <p class="junior-para">
-Drag each animal into the correct group.
+    Click an animal and then click the correct group.
 </p>
 
 <h2 id="score">
-Score : 0 / 8
+    Score : 0 / 8
 </h2>
+
 
 <div class="classify-container">
 
@@ -46,6 +55,8 @@ Score : 0 / 8
 
         <div class="drop-zone big-zone"
              data-group="vertebrates">
+
+            Click Here
 
         </div>
 
@@ -63,6 +74,8 @@ Score : 0 / 8
         <div class="drop-zone big-zone"
              data-group="invertebrates">
 
+            Click Here
+
         </div>
 
     </div>
@@ -71,73 +84,49 @@ Score : 0 / 8
 
 
 <h2 class="drag-title">
-Drag the Animals
+    Animals
 </h2>
 
 <div class="drag-container">
 
     <div class="drag-item"
-         draggable="true"
          data-group="vertebrates">
-
         Lion
-
     </div>
 
     <div class="drag-item"
-         draggable="true"
-         data-group="invertebrates">
-
-        Butterfly
-
-    </div>
-
-    <div class="drag-item"
-         draggable="true"
          data-group="vertebrates">
-
         Cow
-
     </div>
 
     <div class="drag-item"
-         draggable="true"
-         data-group="invertebrates">
-
-        Earthworm
-
-    </div>
-
-    <div class="drag-item"
-         draggable="true"
          data-group="vertebrates">
-
         Duck
-
     </div>
 
     <div class="drag-item"
-         draggable="true"
-         data-group="invertebrates">
-
-        Spider
-
-    </div>
-
-    <div class="drag-item"
-         draggable="true"
          data-group="vertebrates">
-
         Elephant
-
     </div>
 
     <div class="drag-item"
-         draggable="true"
          data-group="invertebrates">
+        Butterfly
+    </div>
 
+    <div class="drag-item"
+         data-group="invertebrates">
+        Spider
+    </div>
+
+    <div class="drag-item"
+         data-group="invertebrates">
+        Earthworm
+    </div>
+
+    <div class="drag-item"
+         data-group="invertebrates">
         Octopus
-
     </div>
 
 </div>
@@ -145,24 +134,41 @@ Drag the Animals
 <h2 id="message"></h2>
 
 
+<!-- Sounds -->
+
 <audio id="correctSound">
-    <source src="../assets/sounds/correct.mp3" type="audio/mpeg">
+    <source src="../assets/sounds/correct.mp3"
+            type="audio/mpeg">
 </audio>
 
 <audio id="wrongSound">
-    <source src="../assets/sounds/wrong.mp3" type="audio/mpeg">
+    <source src="../assets/sounds/wrong.mp3"
+            type="audio/mpeg">
 </audio>
 
 <audio id="winSound">
-    <source src="../assets/sounds/win.mp3" type="audio/mpeg">
+    <source src="../assets/sounds/win.mp3"
+            type="audio/mpeg">
 </audio>
+
+
 <!-- Wrong Answer -->
- <div id="customAlert" class="custom-alert">
+
+<div id="customAlert"
+     class="custom-alert">
+
     <div class="alert-box">
+
         <p id="alertText"></p>
-        <button onclick="closeAlert()">OK</button>
+
+        <button onclick="closeAlert()">
+            OK
+        </button>
+
     </div>
+
 </div>
+
 
 <script src="../assets/javascript/junior-games-sort.js"></script>
 

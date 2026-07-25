@@ -37,11 +37,11 @@
 
 <p class="junior-para">
 
-    Drag the stages into the correct order.
+    Click a stage, then click the correct position.
 
 </p>
 
-<h2 id="cycleTitle">
+<h2 id="gameTitle">
 
     Life Cycle 1 of 5
 
@@ -54,33 +54,89 @@
 </h2>
 
 
-<div class="order-container">
+<div class="sequence-container">
 
-    <div class="order-box"
-         data-stage="1">
+    <div class="sequence-row">
 
-        Drop Here
+        <div class="sequence-label">
 
-    </div>
+            Stage 1
 
-    <div class="order-box"
-         data-stage="2">
+        </div>
 
-        Drop Here
+        <div class="sequence-slot">
 
-    </div>
+            Drop Here
 
-    <div class="order-box"
-         data-stage="3">
-
-        Drop Here
+        </div>
 
     </div>
 
-    <div class="order-box"
-         data-stage="4">
 
-        Drop Here
+    <div class="sequence-row">
+
+        <div class="sequence-label">
+
+            Stage 2
+
+        </div>
+
+        <div class="sequence-slot">
+
+            Drop Here
+
+        </div>
+
+    </div>
+
+
+    <div class="sequence-row">
+
+        <div class="sequence-label">
+
+            Stage 3
+
+        </div>
+
+        <div class="sequence-slot">
+
+            Drop Here
+
+        </div>
+
+    </div>
+
+
+    <div class="sequence-row">
+
+        <div class="sequence-label">
+
+            Stage 4
+
+        </div>
+
+        <div class="sequence-slot">
+
+            Drop Here
+
+        </div>
+
+    </div>
+
+
+    <div class="sequence-row">
+
+        <div class="sequence-label">
+
+            Stage 5
+
+        </div>
+
+        <div class="sequence-slot">
+
+            Drop Here
+
+        </div>
 
     </div>
 
@@ -89,24 +145,24 @@
 
 <h2 class="drag-title">
 
-    Drag These
+    Choose the Stages
 
 </h2>
+
 
 <div class="drag-container"
      id="dragContainer">
 
-    <!-- JavaScript loads the stages here -->
+    <!-- JavaScript loads the stage cards here -->
 
 </div>
 
 
-<div style="text-align:center; margin-top:30px;">
+<div class="next-button-wrapper">
 
-    <button id="nextButton"
-            style="display:none;">
+    <button id="nextButton">
 
-        Next Life Cycle ▶
+        Next ▶
 
     </button>
 
@@ -116,13 +172,14 @@
 <h2 id="message"></h2>
 
 
+<!-- Sounds -->
+
 <audio id="correctSound">
 
     <source src="../assets/sounds/correct.mp3"
             type="audio/mpeg">
 
 </audio>
-
 
 <audio id="wrongSound">
 
@@ -131,21 +188,35 @@
 
 </audio>
 
-
 <audio id="winSound">
 
     <source src="../assets/sounds/win.mp3"
             type="audio/mpeg">
 
 </audio>
+
+
 <!-- Wrong Answer -->
-<div id="customAlert" class="custom-alert">
+
+<div id="customAlert"
+     class="custom-alert">
+
     <div class="alert-box">
+
         <p id="alertText"></p>
-        <button onclick="closeAlert()">OK</button>
+
+        <button onclick="closeAlert()">
+
+            OK
+
+        </button>
+
     </div>
+
 </div>
-<script src="../assets/javascript/junior-games-lifecycle-order.js"></script>
+
+
+<script src="../assets/javascript/junior-games-lifecycle.js"></script>
 
 </body>
 

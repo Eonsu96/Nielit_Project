@@ -12,11 +12,11 @@ const correctSound = document.getElementById("correctSound");
 const wrongSound = document.getElementById("wrongSound");
 const winSound = document.getElementById("winSound");
 
-let draggedItem = null;
+let selectedItem = null;
 let score = 0;
 
 // ==========================
-// SHUFFLE THE WORDS
+// SHUFFLE WORDS
 // ==========================
 
 const dragContainer = document.querySelector(".drag-container");
@@ -40,47 +40,55 @@ function shuffleWords() {
 shuffleWords();
 
 // ==========================
-// DRAG START
+// SELECT WORD
 // ==========================
 
 dragItems.forEach(item => {
 
-    item.addEventListener("dragstart", function () {
+    item.addEventListener("click", function () {
 
-        draggedItem = this;
+        // Remove previous selection
+        dragItems.forEach(i => i.classList.remove("selected"));
+
+        // Select this one
+        selectedItem = this;
+        this.classList.add("selected");
 
     });
 
 });
 
 // ==========================
-// DROP ZONES
+// CHECK ANSWER
 // ==========================
 
 dropZones.forEach(zone => {
 
-    zone.addEventListener("dragover", function (e) {
+    zone.addEventListener("click", function () {
 
-        e.preventDefault();
+        if (!selectedItem) {
 
-    });
+            showAlert("Select a word first!");
 
-    zone.addEventListener("drop", function (e) {
-
-        e.preventDefault();
-
-        // Prevent replacing a correct answer
-        if (this.classList.contains("correct")) {
             return;
+
         }
 
-        if (draggedItem.dataset.name === this.dataset.answer) {
+        if (this.classList.contains("correct")) {
 
-            this.textContent = draggedItem.textContent;
+            return;
+
+        }
+
+        if (selectedItem.dataset.name === this.dataset.answer) {
+
+            this.textContent = selectedItem.textContent;
 
             this.classList.add("correct");
 
-            draggedItem.remove();
+            selectedItem.remove();
+
+            selectedItem = null;
 
             correctSound.currentTime = 0;
             correctSound.play();
@@ -104,17 +112,30 @@ dropZones.forEach(zone => {
 
             showAlert("✖️ Oops! Try Again!");
 
+            selectedItem.classList.remove("selected");
+            selectedItem = null;
+
         }
 
     });
 
 });
-// Wrong Answer
-function showAlert(message) {
-    document.getElementById("alertText").textContent = message;
+
+// ==========================
+// CUSTOM ALERT
+// ==========================
+
+function showAlert(text) {
+
+    document.getElementById("alertText").textContent = text;
+
     document.getElementById("customAlert").style.display = "flex";
+
 }
 
 function closeAlert() {
+
     document.getElementById("customAlert").style.display = "none";
+
 }
+

@@ -1,96 +1,389 @@
-body {
-    background-image: url(../images/backgrounds/tiny-background.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: cursive, sans-serif;
+/* ===========================================
+   RESET
+=========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
-header {
-    text-align: center;
-    margin-bottom: 20px;
+
+/* ===========================================
+   BODY
+=========================================== */
+
+body{
+
+    font-family:"Comic Sans MS","Trebuchet MS",Arial,sans-serif;
+
+    /* Change background image here */
+    background-image:url("../images/backgrounds/tiny-background.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:scroll;
+
+    color:#234;
+
+    padding:20px;
 }
-h1 {
-    font-size: 40px;
-    color: #2e7d32;
+
+/* ===========================================
+   HEADER
+=========================================== */
+
+header{
+
+    text-align:center;
+
+    margin-bottom:35px;
 }
-h1::before {
-    content: "🦁🐘🐮 ";
+
+h1{
+
+    color:#2e7d32;
+
+    font-size:3rem;
+
+    font-weight:bold;
+
+    margin-bottom:20px;
 }
-h1::after {
-    content: " 🐶🦆🦉";
+
+h1::before{
+    content:"🦁🐘🐮 ";
 }
-h2, h3 {
-    color: #2e7d32;
+
+h1::after{
+    content:" 🐶🦆🦉";
 }
-a {
-    text-decoration: none;
-    font-size: 26px;
-    margin: 0 10px 0;
-    padding: 10px;
-    box-shadow: 0 0 10px 5px #fff8ec;
-    background-color: #bee8a5;
-    font-weight: bold;
+
+h2{
+
+    color:#2e7d32;
+
+    text-align:center;
+
+    font-size:2rem;
+
+    font-weight:bold;
+
+    margin:20px 0;
 }
-a:hover {
-    background-color: #98d77a;
+
+h3{
+
+    color:#2e7d32;
+
+    text-align:center;
+
+    font-size:1.6rem;
+
+    margin:15px 0;
 }
-img {
-    width: 400px;
-    border-radius: 10px;
+
+/* ===========================================
+   BUTTONS
+=========================================== */
+
+header a{
+
+    display:inline-block;
+
+    margin:8px;
+
+    padding:12px 22px;
+
+    text-decoration:none;
+
+    font-size:1.25rem;
+
+    font-weight:bold;
+
+    color:#234;
+
+    /* Button color */
+    background:#bee8a5;
+
+    border-radius:10px;
+
+    box-shadow:0 0 10px rgba(0,0,0,.2);
+
+    transition:.3s;
 }
-.container-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-    font-weight: bold;
-    font-size: 26px;
-    font-family: cursive, sans-serif;
-    box-shadow: 0 0 10px 5px #FFF8EC;
-    color: #234;
-    background: linear-gradient(to bottom,#fff8ec,#99ad7a);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    border-radius: 10px;
+
+header a:hover{
+
+    background:#98d77a;
 }
-.food-div-extra {
-    flex: 1 0 400px;
+
+/* ===========================================
+   INTRODUCTION / REMEMBER BOX
+=========================================== */
+
+.info-box{
+
+    width:95%;
+
+    max-width:900px;
+
+    margin:25px auto;
+
+    padding:20px;
+
+    border-radius:12px;
+
+    /* Box color */
+    background:#bee8a5;
+
+    box-shadow:0 0 10px rgba(0,0,0,.2);
 }
-.intro-div-extra {
-    flex: 0 0 350px;
+
+/* ===========================================
+   FLEX CONTAINER
+=========================================== */
+
+.container{
+
+    width:95%;
+
+    max-width:1400px;
+
+    margin:30px auto;
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:25px;
 }
-.container {
-    width: 70%;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 20px auto;
-    justify-content: center;
-    padding: 10px;
+
+/* ===========================================
+   CARD
+=========================================== */
+
+.container-div{
+
+    flex:1 1 320px;
+
+    max-width:400px;
+
+    padding:20px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    /* Card color */
+    background:linear-gradient(to bottom,#fff8ec,#99ad7a);
+
+    box-shadow:0 0 12px rgba(0,0,0,.2);
+
+    transition:.3s;
 }
-.food-habit-container {
-    width: 80%;
-    margin: 10px auto;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
+
+.container-div:hover{
+
+    transform:translateY(-5px);
 }
-.intro-h2 {
-    font-size: 30px;
-    margin-left: 300px;
+
+/* ===========================================
+   IMAGES
+=========================================== */
+
+img{
+
+    width:100%;
+
+    max-width:320px;
+
+    height:auto;
+
+    border-radius:10px;
+
+    margin:15px 0;
 }
-.intro-para {
-    display: flex;
-    box-shadow: 0 0 10px 5px #fff8ec;
-    color: #234;
-    font-weight: bold;
-    font-size: 26px;
-    width: 50%;
-    margin-left: 200px;
-    border-radius: 10px;
-    background-color: #bee8a5;
+
+/* ===========================================
+   TEXT
+=========================================== */
+
+p{
+
+    font-size:1.3rem;
+
+    font-weight:bold;
+
+    line-height:1.7;
+
+    margin-top:10px;
 }
-.intro-h2-main {
-    font-size: 30px;
-    text-align: center;
+
+ul{
+
+    text-align:left;
+
+    padding-left:28px;
+
+    margin-top:10px;
+}
+
+li{
+
+    font-size:1.2rem;
+
+    font-weight:bold;
+
+    line-height:1.7;
+
+    margin:6px 0;
+}
+
+/* ===========================================
+   AUDIO
+=========================================== */
+
+audio{
+
+    width:100%;
+
+    margin-top:15px;
+}
+
+/* ===========================================
+   TABLET
+=========================================== */
+
+@media (max-width:992px){
+
+    h1{
+
+        font-size:2.5rem;
+    }
+
+    h2{
+
+        font-size:1.8rem;
+    }
+
+    .container{
+
+        gap:20px;
+    }
+
+    .container-div{
+
+        flex:1 1 300px;
+    }
+}
+
+/* ===========================================
+   MOBILE
+=========================================== */
+
+@media (max-width:768px){
+
+    body{
+
+        padding:12px;
+    }
+
+    h1{
+
+        font-size:2.2rem;
+    }
+
+    h2{
+
+        font-size:1.6rem;
+    }
+
+    h3{
+
+        font-size:1.4rem;
+    }
+
+    header a{
+
+        display:block;
+
+        width:220px;
+
+        margin:10px auto;
+
+        font-size:1.1rem;
+    }
+
+    .container{
+
+        width:100%;
+
+        gap:18px;
+    }
+
+    .container-div{
+
+        flex:1 1 100%;
+
+        max-width:100%;
+
+        padding:18px;
+    }
+
+    .info-box{
+
+        width:100%;
+
+        padding:18px;
+    }
+
+    img{
+
+        max-width:280px;
+    }
+
+    p{
+
+        font-size:1.15rem;
+    }
+
+    li{
+
+        font-size:1.1rem;
+    }
+}
+
+/* ===========================================
+   SMALL PHONES
+=========================================== */
+
+@media (max-width:480px){
+
+    h1{
+
+        font-size:1.9rem;
+    }
+
+    h2{
+
+        font-size:1.4rem;
+    }
+
+    header a{
+
+        width:100%;
+    }
+
+    img{
+
+        max-width:240px;
+    }
+
+    p,
+    li{
+
+        font-size:1rem;
+    }
 }

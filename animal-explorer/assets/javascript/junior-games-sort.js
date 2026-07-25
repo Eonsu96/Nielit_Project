@@ -5,8 +5,6 @@
 const dragItems = document.querySelectorAll(".drag-item");
 const dropZones = document.querySelectorAll(".big-zone");
 
-const dragContainer = document.querySelector(".drag-container");
-
 const scoreBoard = document.getElementById("score");
 const message = document.getElementById("message");
 
@@ -14,41 +12,48 @@ const correctSound = document.getElementById("correctSound");
 const wrongSound = document.getElementById("wrongSound");
 const winSound = document.getElementById("winSound");
 
-let draggedItem = null;
+let selectedItem = null;
 let score = 0;
 
 
 // ==========================
-// SHUFFLE WORDS
+// SHUFFLE ANIMALS
 // ==========================
 
-function shuffleWords() {
+const dragContainer = document.querySelector(".drag-container");
 
-    const items = Array.from(dragContainer.children);
+function shuffleAnimals() {
 
-    for (let i = items.length - 1; i > 0; i--) {
+    const animals = Array.from(dragContainer.children);
+
+    for (let i = animals.length - 1; i > 0; i--) {
 
         const j = Math.floor(Math.random() * (i + 1));
 
-        [items[i], items[j]] = [items[j], items[i]];
+        [animals[i], animals[j]] = [animals[j], animals[i]];
     }
 
-    items.forEach(item => dragContainer.appendChild(item));
-
+    animals.forEach(animal => dragContainer.appendChild(animal));
 }
 
-shuffleWords();
+shuffleAnimals();
 
 
 // ==========================
-// DRAG EVENTS
+// SELECT ANIMAL
 // ==========================
 
 dragItems.forEach(item => {
 
-    item.addEventListener("dragstart", function () {
+    item.addEventListener("click", function () {
 
-        draggedItem = this;
+        if (this.classList.contains("correct")) return;
+
+        dragItems.forEach(i => i.classList.remove("selected"));
+
+        this.classList.add("selected");
+
+        selectedItem = this;
 
     });
 
@@ -56,47 +61,19 @@ dragItems.forEach(item => {
 
 
 // ==========================
-// DROP EVENTS
+// CLICK CATEGORY
 // ==========================
 
 dropZones.forEach(zone => {
 
-    zone.addEventListener("dragover", function (e) {
+    zone.addEventListener("click", function () {
 
-        e.preventDefault();
+        if (!selectedItem) return;
 
-        this.classList.add("drag-over");
-
-    });
-
-
-    zone.addEventListener("dragleave", function () {
-
-        this.classList.remove("drag-over");
-
-    });
-
-
-    zone.addEventListener("drop", function (e) {
-
-        e.preventDefault();
-
-        this.classList.remove("drag-over");
-
-        if (!draggedItem) return;
-
-        const animalGroup = draggedItem.dataset.group;
-
+        const animalGroup = selectedItem.dataset.group;
         const correctGroup = this.dataset.group;
 
-
         if (animalGroup === correctGroup) {
-
-            this.appendChild(draggedItem);
-
-            draggedItem.setAttribute("draggable", "false");
-
-            draggedItem.style.cursor = "default";
 
             correctSound.currentTime = 0;
             correctSound.play();
@@ -104,6 +81,15 @@ dropZones.forEach(zone => {
             score++;
 
             scoreBoard.textContent = "Score : " + score + " / 8";
+
+            selectedItem.classList.remove("selected");
+            selectedItem.classList.add("correct");
+
+            selectedItem.style.cursor = "default";
+
+            this.appendChild(selectedItem);
+
+            selectedItem = null;
 
             if (score === 8) {
 
@@ -128,12 +114,22 @@ dropZones.forEach(zone => {
     });
 
 });
-// Wrong Answer
+
+
+// ==========================
+// WRONG ANSWER ALERT
+// ==========================
+
 function showAlert(message) {
+
     document.getElementById("alertText").textContent = message;
+
     document.getElementById("customAlert").style.display = "flex";
+
 }
 
 function closeAlert() {
+
     document.getElementById("customAlert").style.display = "none";
+
 }

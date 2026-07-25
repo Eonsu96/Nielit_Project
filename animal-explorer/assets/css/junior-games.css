@@ -1,76 +1,67 @@
-body {
-    background: linear-gradient(to bottom, #fff8ec, #99ad7a);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-header{
-    font-size: 26px;
-    color: #256a2b;
-    margin-bottom: 20px;
-    text-align: center;
-}
-h2 {
-    color: #256a2b;
-}
-a {
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-/* JUNIOR-GAMES GROUPS-GAME.HTML */
 /* ===========================
    PAGE
 =========================== */
 
-.general-game{
+*{
     margin:0;
-    padding:20px;
-    background:linear-gradient(to bottom,#FFF8EC,#99AD7A);
-    background-repeat:no-repeat;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Verdana,sans-serif;
+
+    /* Background image here */
+    background: linear-gradient(to bottom, #fff8ec, #99ad7a);
     background-size:cover;
-    background-attachment:fixed;
+    background-repeat:no-repeat;
+    background-position:center;
+    min-height:100vh;
+
+    padding:20px;
 }
 
 /* ===========================
    HEADER
 =========================== */
 
-.general-header{
+.junior-header{
     text-align:center;
-    font-family:cursive,sans-serif;
-    color:#256a2b;
-    margin-bottom:20px;
+    margin-bottom:25px;
 }
 
 .junior-h1{
-    font-size:2.2rem;
-}
-
-.junior-h1::before{
-    content:"🦁🐘🐮 ";
-}
-
-.junior-h1::after{
-    content:" 🐶🦆🦉";
+    color:#2e7d32;
+    font-size:clamp(1.6rem,4vw,2.6rem);
+    margin-bottom:20px;
 }
 
 .junior-anchor{
+
     display:inline-block;
-    margin:10px;
-    padding:10px 20px;
-    text-decoration:none;
-    background:#bee8a5;
+
+    margin:8px;
+
+    padding:12px 22px;
+
+    background:#b8e986;
+
     color:#234;
-    font-size:1.2rem;
+
+    text-decoration:none;
+
     font-weight:bold;
+
     border-radius:10px;
-    box-shadow:0 0 10px #fff8ec;
+
+    font-size:clamp(1rem,2vw,1.2rem);
+
 }
 
 .junior-anchor:hover{
+
     background:#98d77a;
+
 }
 
 /* ===========================
@@ -78,11 +69,15 @@ a {
 =========================== */
 
 .junior-para{
+
     text-align:center;
-    font-size:1.5rem;
-    font-family:cursive,sans-serif;
-    color:#234;
+
+    font-size:clamp(1rem,2vw,1.35rem);
+
     font-weight:bold;
+
+    margin-bottom:20px;
+
 }
 
 /* ===========================
@@ -90,10 +85,15 @@ a {
 =========================== */
 
 #score{
+
     text-align:center;
-    color:#256a2b;
-    font-family:cursive,sans-serif;
-    margin-bottom:20px;
+
+    color:#2e7d32;
+
+    margin-bottom:25px;
+
+    font-size:clamp(1.2rem,2vw,1.6rem);
+
 }
 
 /* ===========================
@@ -102,45 +102,41 @@ a {
 
 .junior-container{
 
-    width:80%;
+    width:min(1200px,100%);
+
     margin:auto;
 
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:25px;
+    display:grid;
 
-    padding:25px;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 
-    border-radius:15px;
+    gap:20px;
 
-    background-image:url("../images/backgrounds/junior-background.png");
-    background-size:cover;
-    background-repeat:no-repeat;
-
-    box-shadow:0 0 20px;
 }
 
 .junior-div{
 
-    width:220px;
+    background:#fff8ec;
 
     padding:15px;
 
+    border-radius:12px;
+
     text-align:center;
 
-    background:#FFF8EC;
-
-    border-radius:15px;
-
-    box-shadow:0 0 10px #fff8ec;
+    box-shadow:0 0 10px rgba(0,0,0,.15);
 
 }
 
 .junior-image{
 
-    width:200px;
-    border-radius:12px;
+    width:100%;
+
+    aspect-ratio:1/1;
+
+    object-fit:cover;
+
+    border-radius:10px;
 
 }
 
@@ -152,97 +148,83 @@ a {
 
     margin-top:15px;
 
-    height:50px;
+    min-height:60px;
 
-    border:3px dashed #256a2b;
+    border:3px dashed #2e7d32;
 
     border-radius:10px;
 
     display:flex;
 
-    justify-content:center;
-
     align-items:center;
 
-    font-size:1.2rem;
+    justify-content:center;
+
+    padding:10px;
+
+    text-align:center;
 
     font-weight:bold;
 
-    font-family:cursive,sans-serif;
+    background:#eaf7df;
 
-    color:#234;
-
-    background:#bee8a5;
+    font-size:1rem;
 
 }
-
-/* Correct answer */
 
 .correct{
 
     background:#98d77a;
 
-    border:3px solid #256a2b;
+    border:3px solid #2e7d32;
 
 }
 
-/* ===========================
-   DRAG AREA
-=========================== */
+/* drag title*/
 
 .drag-title{
 
-    margin-top:40px;
+    margin:40px 0 20px;
 
     text-align:center;
 
-    color:#256a2b;
-
-    font-family:cursive,sans-serif;
+    color:#2e7d32;
 
 }
 
+/* options */
+
 .drag-container{
 
-    width:80%;
+    width:min(1100px,100%);
 
-    margin:25px auto;
+    margin:auto;
 
-    display:flex;
+    display:grid;
 
-    flex-wrap:wrap;
+    grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
 
-    justify-content:center;
-
-    gap:20px;
+    gap:15px;
 
 }
 
 .drag-item{
 
-    width:160px;
+    padding:14px;
 
-    padding:12px;
-
-    text-align:center;
-
-    background:#bee8a5;
+    background:#b8e986;
 
     border-radius:10px;
 
-    cursor:grab;
-
-    font-size:1.2rem;
-
-    font-family:cursive,sans-serif;
+    text-align:center;
 
     font-weight:bold;
 
-    color:#234;
-
-    box-shadow:0 0 8px #fff8ec;
+    cursor:pointer;
 
     user-select:none;
+
+    transition:.2s;
 
 }
 
@@ -252,470 +234,361 @@ a {
 
 }
 
-/* ===========================
-   WIN MESSAGE
-=========================== */
+.drag-item.selected{
+
+    background:#2e7d32;
+
+    color:white;
+
+}
+
+/* message */
 
 #message{
 
     text-align:center;
 
-    color:#256a2b;
-
-    font-family:cursive,sans-serif;
-
     margin:30px;
 
-    font-size:2rem;
+    font-size:1.7rem;
+
+    color:#2e7d32;
 
     font-weight:bold;
 
 }
 
-/* ===========================
-   MOBILE
-=========================== */
+/* alert*/
 
-@media(max-width:768px){
+.custom-alert{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.5);
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999;
+
+}
+
+.alert-box{
+
+    background:#ff4d4d;
+
+    color:white;
+
+    padding:25px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    width:min(90%,320px);
+
+}
+
+.alert-box button{
+
+    margin-top:18px;
+
+    padding:10px 25px;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+
+/*tablet */
+
+@media (max-width:768px){
+
+    body{
+
+        padding:15px;
+
+    }
 
     .junior-container{
 
-        width:95%;
+        grid-template-columns:repeat(2,1fr);
 
     }
 
     .drag-container{
 
-        width:95%;
-
-    }
-
-    .junior-div{
-
-        width:180px;
-
-    }
-
-    .junior-image{
-
-        width:160px;
-
-    }
-
-    .drag-item{
-
-        width:140px;
-
-        font-size:1rem;
-
-    }
-
-    .junior-h1{
-
-        font-size:1.7rem;
+        grid-template-columns:repeat(2,1fr);
 
     }
 
 }
-/* ===========================================
-   VERTEBRATES & INVERTEBRATES GAME
-=========================================== */
 
-.classify-container{
-    width:90%;
-    margin:30px auto;
-    display:flex;
-    justify-content:space-evenly;
-    align-items:flex-start;
-    flex-wrap:wrap;
-    gap:30px;
+/* Phone */
+
+@media (max-width:480px){
+
+    .junior-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .drag-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .junior-anchor{
+
+        display:block;
+
+        width:100%;
+
+        margin:10px 0;
+
+    }
+
 }
 
-.category{
-    width:420px;
-    min-height:420px;
-    background:#FFF8EC;
-    border-radius:15px;
-    box-shadow:0 0 15px ;
-    padding:20px;
-}
-
-.category-title{
-    text-align:center;
-    color:#256a2b;
-    font-family:cursive,sans-serif;
-    font-size:2rem;
-    margin-bottom:20px;
-}
-
-.big-zone{
-    min-height:300px;
-    border:3px dashed #256a2b;
-    border-radius:15px;
-    background:#F6FFE8;
-    display:flex;
-    flex-wrap:wrap;
-    align-content:flex-start;
-    justify-content:center;
-    gap:15px;
-    padding:15px;
-}
-
-.big-zone.drag-over{
-    background:#DFF6D0;
-}
-
-.drag-title{
-    text-align:center;
-    color:#256a2b;
-    margin-top:40px;
-    font-family:cursive,sans-serif;
-}
-
-.drag-container{
-    width:90%;
-    margin:25px auto;
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:18px;
-}
-
-.drag-item{
-    width:160px;
-    padding:12px;
-    text-align:center;
-    background:#BEE8A5;
-    border-radius:10px;
-    cursor:grab;
-    font-size:1.2rem;
-    font-family:cursive,sans-serif;
-    font-weight:bold;
-    color:#234;
-    user-select:none;
-    box-shadow:0 0 8px #FFF8EC;
-    transition:0.2s;
-}
-
-.drag-item:hover{
-    background:#98D77A;
+.selected{
+    outline:4px solid #2196f3;
     transform:scale(1.05);
 }
 
-.drag-item:active{
-    cursor:grabbing;
-}
-
-.big-zone .drag-item{
-    width:140px;
-    margin:5px;
-    cursor:default;
-}
-
-#score{
-    text-align:center;
-    color:#256a2b;
-    font-family:cursive,sans-serif;
-    margin-top:20px;
-}
-
-#message{
-    text-align:center;
-    font-size:2rem;
-    font-family:cursive,sans-serif;
-    color:#256a2b;
-    margin:30px;
-}
-
-/* ===========================
-   MOBILE
-=========================== */
-
-@media(max-width:900px){
-
-    .classify-container{
-        flex-direction:column;
-        align-items:center;
-    }
-
-    .category{
-        width:90%;
-    }
-
-}
-
-@media(max-width:600px){
-
-    .drag-item{
-        width:130px;
-        font-size:1rem;
-    }
-
-    .category-title{
-        font-size:1.6rem;
-    }
-
-    .big-zone{
-        min-height:250px;
-    }
-
-}
-/* ==========================================
-   ORDER GAME (Food Chain & Life Cycle)
-========================================== */
-
-#chainTitle, #cycleTitle{
-    text-align:center;
-    font-family:cursive,sans-serif;
-    color:#2E7D32;
-    margin-top:20px;
-}
-
-.order-container{
-
-    width:90%;
-    margin:30px auto;
+/* Extra for backbone-game.html */
+.big-zone{
 
     display:flex;
-    justify-content:center;
+
     flex-wrap:wrap;
+
+    gap:10px;
+
+    align-content:flex-start;
+
+    justify-content:center;
+
+    min-height:180px;
+
+    padding:15px;
+
+}
+/* Extra for foodchain-game.html and lifecycle-game.html*/
+
+.sequence-container{
+
+    width:85%;
+    max-width:900px;
+
+    margin:35px auto;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.sequence-row{
+
+    display:flex;
+    align-items:center;
+
     gap:20px;
 
 }
 
-.order-box{
+.sequence-label{
 
-    width:170px;
-    min-height:70px;
+    width:220px;
+    flex-shrink:0;
 
-    border:3px dashed #2E7D32;
+    padding:14px 16px;
 
-    border-radius:12px;
+    text-align:center;
 
-    background:#F6FFE8;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    font-family:cursive,sans-serif;
     font-size:1.1rem;
     font-weight:bold;
 
     color:#234;
 
-    padding:10px;
+    background:#d9f2c4;
 
-    transition:0.2s;
+    border-radius:12px;
 
-}
-
-.order-box.drag-over{
-
-    background:#DFF6D0;
+    box-shadow:0 2px 8px rgba(0,0,0,.12);
 
 }
 
-.drag-title{
+.sequence-slot{
 
-    text-align:center;
+    flex:1;
 
-    color:#2E7D32;
-
-    margin-top:35px;
-
-    font-family:cursive,sans-serif;
-
-}
-
-.drag-container{
-
-    width:90%;
-
-    margin:20px auto;
+    min-height:58px;
 
     display:flex;
-
+    align-items:center;
     justify-content:center;
-
-    flex-wrap:wrap;
-
-    gap:20px;
-
-}
-
-.drag-item{
-
-    width:170px;
 
     padding:12px;
 
-    text-align:center;
+    border:3px dashed #2e7d32;
 
-    background:#BEE8A5;
+    border-radius:12px;
 
-    border-radius:10px;
+    background:#fff8ec;
 
-    cursor:grab;
-
-    user-select:none;
-
-    font-family:cursive,sans-serif;
-
-    font-size:1.15rem;
-
+    font-size:1.1rem;
     font-weight:bold;
 
     color:#234;
 
-    box-shadow:0 0 8px #FFF8EC;
-
-    transition:0.2s;
+    transition:.25s;
 
 }
 
-.drag-item:hover{
+.sequence-slot.correct{
 
-    background:#98D77A;
+    background:#98d77a;
 
-    transform:scale(1.05);
+    border-style:solid;
+
+    color:#123;
 
 }
 
-.drag-item:active{
+.sequence-slot.selected{
 
-    cursor:grabbing;
+    outline:3px solid #2e7d32;
+
+}
+
+.next-button-wrapper{
+
+    text-align:center;
+
+    margin-top:30px;
 
 }
 
 #nextButton{
 
-    padding:12px 25px;
+    display:none;
 
-    background:#98D77A;
+    padding:12px 28px;
 
     border:none;
 
     border-radius:10px;
 
+    background:#98d77a;
+
+    color:#234;
+
     font-size:1.1rem;
 
     font-weight:bold;
 
-    font-family:cursive,sans-serif;
-
     cursor:pointer;
 
-    box-shadow:0 0 8px #FFF8EC;
+    transition:.25s;
 
 }
 
 #nextButton:hover{
 
-    background:#7BC95C;
+    background:#7cc95d;
 
-}
-
-#score{
-
-    text-align:center;
-
-    color:#2E7D32;
-
-    font-family:cursive,sans-serif;
-
-}
-
-#message{
-
-    text-align:center;
-
-    color:#2E7D32;
-
-    font-family:cursive,sans-serif;
-
-    font-size:2rem;
-
-    margin:30px;
+    transform:translateY(-2px);
 
 }
 
 
-/* ===========================
-   MOBILE
-=========================== */
+/* ==========================================
+   TABLETS
+========================================== */
 
-@media(max-width:900px){
+@media (max-width:768px){
 
-    .order-container{
+    .sequence-container{
 
-        gap:15px;
+        width:94%;
 
     }
 
-    .order-box{
+    .sequence-row{
 
-        width:140px;
+        gap:12px;
 
     }
 
-    .drag-item{
+    .sequence-label{
 
-        width:140px;
+        width:150px;
+
+        font-size:1rem;
+
+        padding:12px;
+
+    }
+
+    .sequence-slot{
+
+        min-height:52px;
+
+        font-size:1rem;
 
     }
 
 }
 
-@media(max-width:600px){
 
-    .order-box{
+/* ==========================================
+   PHONES
+========================================== */
 
-        width:90%;
+@media (max-width:550px){
+
+    .sequence-row{
+
+        flex-direction:column;
+
+        align-items:stretch;
 
     }
 
-    .drag-item{
+    .sequence-label{
 
-        width:90%;
+        width:100%;
+
+    }
+
+    .sequence-slot{
+
+        width:100%;
+
+        min-height:55px;
 
     }
 
     #nextButton{
 
-        width:90%;
+        width:100%;
+
+        max-width:260px;
 
     }
 
-}
-/* Wrong Answer */
-.custom-alert {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.5);
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-}
-
-.alert-box {
-    background: #ff4d4d;
-    color: white;
-    padding: 20px 30px;
-    border-radius: 10px;
-    text-align: center;
-    min-width: 280px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
-.alert-box button {
-    margin-top: 15px;
-    padding: 8px 20px;
-    border: none;
-    border-radius: 6px;
-    background: white;
-    color: #d10000;
-    font-weight: bold;
-    cursor: pointer;
 }

@@ -3,15 +3,15 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<title>Food Chain Game</title>
+    <title>Food Chain Game</title>
 
-<link rel="stylesheet"
-href="../assets/css/junior-games.css">
+    <link rel="stylesheet"
+          href="../assets/css/junior-games.css">
 
 </head>
 
@@ -19,109 +19,152 @@ href="../assets/css/junior-games.css">
 
 <header class="junior-header">
 
-<h1 class="junior-h1">
+    <h1 class="junior-h1">
+        Arrange the Food Chain
+    </h1>
 
-Arrange the Food Chain
+    <a class="junior-anchor"
+       href="../index.html">
+        Homepage
+    </a>
 
-</h1>
-
-<a class="junior-anchor"
-href="../index.html">
-
-Homepage
-
-</a>
-
-<a class="junior-anchor"
-href="index.html">
-
-Games
-
-</a>
+    <a class="junior-anchor"
+       href="index.html">
+        Games
+    </a>
 
 </header>
 
 <p class="junior-para">
 
-Drag the stages into the correct order.
+    Click a stage, then click the correct position.
 
 </p>
 
-<h2 id="chainTitle">
+<h2 id="gameTitle">
 
-Food Chain 1 of 4
+    Food Chain 1 of 4
 
 </h2>
 
 <h2 id="score">
 
-Score : 0 / 4
+    Score : 0 / 15
 
 </h2>
 
 
-<div class="order-container">
+<div class="sequence-container">
 
-<div class="order-box"
-data-stage="1">
+    <div class="sequence-row">
 
-Drop Here
+        <div class="sequence-label">
 
-</div>
+            Primary Producer
 
-<div class="order-box"
-data-stage="2">
+        </div>
 
-Drop Here
+        <div class="sequence-slot">
 
-</div>
+            Drop Here
 
-<div class="order-box"
-data-stage="3">
+        </div>
 
-Drop Here
+    </div>
 
-</div>
 
-<div class="order-box"
-data-stage="4">
+    <div class="sequence-row">
 
-Drop Here
+        <div class="sequence-label">
 
-</div>
+            Primary Consumer
 
-<div class="order-box"
-data-stage="5">
+        </div>
 
-Drop Here
+        <div class="sequence-slot">
 
-</div>
+            Drop Here
+
+        </div>
+
+    </div>
+
+
+    <div class="sequence-row">
+
+        <div class="sequence-label">
+
+            Secondary Consumer
+
+        </div>
+
+        <div class="sequence-slot">
+
+            Drop Here
+
+        </div>
+
+    </div>
+
+
+    <div class="sequence-row">
+
+        <div class="sequence-label">
+
+            Tertiary Consumer
+
+        </div>
+
+        <div class="sequence-slot">
+
+            Drop Here
+
+        </div>
+
+    </div>
+
+
+    <div class="sequence-row">
+
+        <div class="sequence-label">
+
+            Apex Predator
+
+        </div>
+
+        <div class="sequence-slot">
+
+            Drop Here
+
+        </div>
+
+    </div>
 
 </div>
 
 
 <h2 class="drag-title">
 
-Drag These
+    Choose the Stages
 
 </h2>
 
-<div class="drag-container"
-id="dragContainer">
 
-<!-- JavaScript will load the words here -->
+<div class="drag-container"
+     id="dragContainer">
+
+    <!-- JavaScript loads the stage cards here -->
 
 </div>
 
 
-<div style="text-align:center; margin-top:30px;">
+<div class="next-button-wrapper">
 
-<button id="nextButton"
-style="display:none;">
+    <button id="nextButton">
 
-Next Food Chain ▶
+        Next ▶
 
-</button>
+    </button>
 
 </div>
 
@@ -129,41 +172,45 @@ Next Food Chain ▶
 <h2 id="message"></h2>
 
 
+<!-- Sounds -->
+
 <audio id="correctSound">
-
-<source
-src="../assets/sounds/correct.mp3"
-type="audio/mpeg">
-
+    <source src="../assets/sounds/correct.mp3"
+            type="audio/mpeg">
 </audio>
-
 
 <audio id="wrongSound">
-
-<source
-src="../assets/sounds/wrong.mp3"
-type="audio/mpeg">
-
+    <source src="../assets/sounds/wrong.mp3"
+            type="audio/mpeg">
 </audio>
-
 
 <audio id="winSound">
-
-<source
-src="../assets/sounds/win.mp3"
-type="audio/mpeg">
-
+    <source src="../assets/sounds/win.mp3"
+            type="audio/mpeg">
 </audio>
+
+
 <!-- Wrong Answer -->
- <div id="customAlert" class="custom-alert">
+
+<div id="customAlert"
+     class="custom-alert">
+
     <div class="alert-box">
+
         <p id="alertText"></p>
-        <button onclick="closeAlert()">OK</button>
+
+        <button onclick="closeAlert()">
+
+            OK
+
+        </button>
+
     </div>
+
 </div>
 
 
-<script src="../assets/javascript/junior-games-foodchain-order.js"></script>
+<script src="../assets/javascript/junior-games-foodchain.js"></script>
 
 </body>
 

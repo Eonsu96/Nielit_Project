@@ -1,18 +1,92 @@
-/* responsive tweaks */
-@media (max-width:1100px){
-  .grid{grid-template-columns:repeat(2,1fr)}
-  .grid-4{grid-template-columns:repeat(2,1fr)}
-  .lesson-wrap{grid-template-columns:1fr}
+@media (max-width:1024px){
+
+.frame{
+    padding:30px;
 }
-@media (max-width:720px){
-  .site-header{padding:14px 16px}
-  .brand-name{font-size:1.3rem}
-  .brand-tag{display:none}
-  .frame{padding:26px 18px 34px}
-  .grid,.grid-4,.grid-2,.quiz-options,.dd-wrap{grid-template-columns:1fr;gap:16px}
-  .mem-grid{grid-template-columns:repeat(3,1fr)}
-  h1.page-title{font-size:1.7rem;margin:14px 8px}
-  .card h2{font-size:1.5rem}
-  .earth-3d{width:170px;height:170px}
-  .sun-3d{width:150px;height:150px}
+
+.grid,
+.grid-2,
+.grid-4,
+.card-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media (max-width:768px){
+
+.header{
+    padding:15px;
+}
+
+.brand-name{
+    font-size:1.4rem;
+}
+
+.brand-tag{
+    display:none;
+}
+
+.page-title{
+    font-size:1.8rem;
+}
+
+.subtitle{
+    font-size:1rem;
+}
+
+.frame{
+    padding:20px;
+}
+
+.grid,
+.grid-2,
+.grid-4,
+.card-grid{
+    grid-template-columns:1fr;
+}
+
+.card{
+    min-height:140px;
+}
+
+.back-link{
+    width:40%;
+    justify-content:center;
+}
+
+.nav-links{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+}
+
+@media (max-width:480px){
+
+.logo img{
+    width:38px;
+}
+
+.brand-name{
+    font-size:1.2rem;
+}
+
+.page-title{
+    font-size:1.5rem;
+}
+
+.subtitle{
+    font-size:0.95rem;
+}
+
+.frame{
+    padding:16px;
+}
+
+.card h2{
+    font-size:1.3rem;
+}
+
 }

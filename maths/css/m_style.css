@@ -165,9 +165,9 @@ ul {
 }
 
 .frame, main {
-    max-width: 1300px;
+    max-width: min(1300px, 100%);
     margin: 0 auto 40px;
-    padding: 60px 60px 70px;
+    padding:  clamp(18px, 4vw, 60px);
     border-radius: 25px;
     background: rgba(255, 255, 255, 0.1); /* Changed from solid white to allow blur */
     border: 2px solid rgba(255, 255, 255, 0.55);
@@ -196,6 +196,7 @@ footer {
 .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
 
 .card {
+    width: 100%;
     min-height: 150px;
     padding: 22px 20px;
     text-decoration: none;
@@ -222,7 +223,7 @@ footer {
 
 .card h2 {
     margin: 0 0 6px;
-    font-size: 1.9rem;
+    font-size: font-size:clamp(1.3rem,5vw,1.9rem);
     font-family: 'Fredoka', sans-serif;
     font-weight: 700;
     color: var(--green);
@@ -237,7 +238,7 @@ footer {
 .card p {
     margin: 6px 0 8px;
     color: var(--ink-soft);
-    font-size: 0.95rem;
+        
 }
 
 .card span.cta {
@@ -357,19 +358,6 @@ th, td {
     text-align: center;
 }
 
-/* ===== 9. Forms & Buttons ===== */
-/* form section {
-    margin-bottom: 20px;
-} */
-
-/* button {
-    padding: 10px 20px;
-    background-color: darkslategrey;
-    color: white;
-    border: none;
-    cursor: none;
-} */
-
 button:hover {
-    background-color:grey;
+    background-color:rgba(255, 255, 255, 0.05);
 }

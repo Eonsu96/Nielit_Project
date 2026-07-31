@@ -141,44 +141,85 @@ h1.page-title{
 }
 
 /* --------- card grid --------- */
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px}
-.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
-.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:36px
+}
+
+.grid-4{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:26px
+}
+
+.grid-2{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:28px
+}
+
+/* Cards */
 
 .card{
   min-height:150px;
   padding:22px 20px;
-  text-decoration:none;color:var(--ink);
+  text-decoration:none;
+  color:var(--ink);
   background:var(--card);
   border-radius:var(--radius);
   border:2px solid var(--card-border);
-  display:flex;flex-direction:column;justify-content:center;align-items:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
   text-align:center;
   box-shadow:var(--shadow);
   transition:transform .3s ease, box-shadow .3s ease, background .3s;
   position:relative;overflow:hidden;
 }
-.card:hover{transform:translateY(-8px) scale(1.03);box-shadow:var(--shadow-lg);background:#fff}
-.card h2{margin:0 0 6px;font-size:1.9rem;font-family:'Fredoka One', cursive; font-weight:700; color:var(--green);
-  display:flex;align-items:center;gap:12px}
-.card h2 i{font-size:2.1rem}
-.card p{margin:6px 0 8px;color:var(--ink-soft);font-size:.95rem}
-.card span.cta{color:var(--link);text-decoration:underline;font-weight:600}
-.card .badge{position:absolute;top:10px;right:12px;background:var(--sun);color:#5a3717;
-  padding:3px 10px;border-radius:20px;font-size:.72rem;font-weight:700}
+.card:hover{
+  transform:translateY(-8px) scale(1.03);
+  box-shadow:var(--shadow-lg);
+  background:#fff
+}
 
+.card h2{
+  margin:0 0 6px;font-size:1.9rem;
+  font-family:'Fredoka',sans-serif; 
+  font-weight:700; 
+  color:var(--green);
+  display:flex;
+  align-items:center;
+  gap:12px
+}
 
-/* --------- wooden board ---------- */
-/* .board{
-  background:linear-gradient(180deg,#8d5a2b 0%,var(--wood) 65%,var(--wood-dark) 100%);
-  color:#fff8ec;
-  border-radius:16px;
-  padding:22px 20px;
-  box-shadow:0 10px 24px rgba(0,0,0,.38), inset 0 2px 0 rgba(255,255,255,.15);
-  border:3px solid #5a3717;
-  text-align:center;
-  font-family:'Baloo 2',sans-serif;
-} */
+.card h2 i{
+  font-size:2.1rem
+}
+
+.card p{
+  margin:6px 0 8px;
+  color:var(--ink-soft);
+  ont-size:.95rem
+}
+
+.card span.cta{
+  color:var(--link);
+  text-decoration:underline;
+  font-weight:600
+}
+
+.card .badge{
+  position:absolute;
+  top:10px;right:12px;
+  background:var(--sun);
+  color:#5a3717;
+  padding:3px 10px;
+  border-radius:20px;
+  font-size:.72rem;
+  font-weight:700
+}
 
 
 /* back link */

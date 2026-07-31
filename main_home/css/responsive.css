@@ -1,0 +1,18 @@
+/* responsive tweaks */
+@media (max-width:1100px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .grid-4{grid-template-columns:repeat(2,1fr)}
+  .lesson-wrap{grid-template-columns:1fr}
+}
+@media (max-width:720px){
+  .site-header{padding:14px 16px}
+  .brand-name{font-size:1.3rem}
+  .brand-tag{display:none}
+  .frame{padding:26px 18px 34px}
+  .grid,.grid-4,.grid-2,.quiz-options,.dd-wrap{grid-template-columns:1fr;gap:16px}
+  .mem-grid{grid-template-columns:repeat(3,1fr)}
+  h1.page-title{font-size:1.7rem;margin:14px 8px}
+  .card h2{font-size:1.5rem}
+  .earth-3d{width:170px;height:170px}
+  .sun-3d{width:150px;height:150px}
+}

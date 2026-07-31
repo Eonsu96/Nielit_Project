@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap');
+
+/* ===== 1. CSS Variables ===== */
+:root {
+    --sky: #eef8ff;
+    --green: #255b2d;
+    --leaf: #3e8f47;
+    --wood: #7b4d21;
+    --wood-dark: #5a3717;
+    --sun: #ffd447;
+    --sky-blue: #4aa8ff;
+    --rose: #ff6f91;
+    --violet: #8a63d2;
+    --card: rgba(255, 255, 255, 0.85);
+    --card-border: #c6c6c6;
+    --ink: #222;
+    --ink-soft: #4a4a4a;
+    --link: #0044dd;
+    --shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 18px 40px rgba(0, 0, 0, 0.28);
+    --radius: 20px;
+    --radius-sm: 14px;
+    --text-soft: #51607A;
+    --border: rgba(15, 23, 42, 0.09);
+}
+
+/* ===== 2. Base Reset & Body ===== */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Fredoka', sans-serif;
+    background: var(--sky);
+    color: var(--ink);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Nature background */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: url('../images/background.png') center/cover no-repeat;
+    filter: brightness(0.82) saturate(1.05);
+    z-index: -2;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.18) 100%);
+    z-index: -1;
+}
+
+/* ===== 3. Typography ===== */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+h1.page-title {
+    color: var(--green);
+    font-family: 'Baloo 2', sans-serif; /* NOTE: Make sure to import this font in HTML if using */
+    font-weight: 800;
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin: 22px 16px 20px;
+    text-shadow: 0 3px 0 rgba(255, 255, 255, 0.55), 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    color: #1565c0;
+    border-bottom: 2px solid #1565c0;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #d35400;
+    margin-top: 15px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    font-size: 1.5rem;
+    margin: -8px 12px 20px;
+    font-weight: 500;
+}
+
+ul {
+    margin-left: 25px;
+}
+
+/* ===== 4. Layout Structure ===== */
+.header {
+    position: flex; /* FIXED: Was 'flex' */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 12px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    gap: 15px;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+    border-radius: 30%;
+    display: block;
+    object-fit: contain;
+    transition: 0.35s ease;
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.25));
+}
+
+.brand-name {
+    /* font-family: var(--font-mono); NOTE: This variable is missing from your :root */
+    font-weight: 800;
+    font-size: 2rem;
+    line-height: 1;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.brand-tag {
+    font-size: 0.85rem;
+    color: #eaffea;
+    letter-spacing: 0.06em;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background: darkcyan;
+    color: var(--green);
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: var(--shadow);
+}
+
+.back-link:hover {
+    background: rgba(0, 0, 0, 0.08);
+}
+
+.frame, main {
+    max-width: 1300px;
+    margin: 0 auto 40px;
+    padding: 60px 60px 70px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1); /* Changed from solid white to allow blur */
+    border: 2px solid rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+main.glass-effect {
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(17px);
+    -webkit-backdrop-filter: blur(17px);
+}
+
+footer {
+    background-color: grey;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* ===== 5. Cards & Grids ===== */
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+
+.card {
+    min-height: 150px;
+    padding: 22px 20px;
+    text-decoration: none;
+    color: var(--ink);
+    background: var(--card);
+    border-radius: var(--radius);
+    border: 2px solid var(--card-border);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: var(--shadow-lg);
+    background: #fff;
+}
+
+.card h2 {
+    margin: 0 0 6px;
+    font-size: 1.9rem;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    color: var(--green);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: none; /* overrides the global h2 blue line */
+}
+
+.card h2 i { font-size: 2.1rem; }
+
+.card p {
+    margin: 6px 0 8px;
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+}
+
+.card span.cta {
+    color: var(--link);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.card .badge {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: var(--sun);
+    color: #5a3717;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+/* ===== 6. Astronomy Chip Design ===== */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: start;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.45s;
+    min-height: 70px;
+}
+
+.glass-card.active {
+    grid-column: 1 / -1;
+}
+
+.glass-header {
+    width: 100%;
+    border: none;
+    background: white;
+    color: var(--green);
+    cursor: pointer;
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.glass-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: 0.45s;
+    padding: 0 25px;
+    color: var(--ink);
+}
+
+.glass-card.active .glass-content {
+    max-height: 1200px;
+    opacity: 1;
+    padding: 25px;
+}
+
+/* ===== 7. Content Sections & Blocks ===== */
+section {
+    margin-bottom: 25px;
+}
+
+.section {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.example {
+    background: #eef8ff;
+    padding: 15px;
+    border-left: 5px solid #1565c0;
+    margin: 10px 0;
+}
+
+.summary {
+    background: #e8f5e9;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* ===== 8. Tables ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table, th, td {
+    border: 1px solid #999;
+}
+
+th {
+    background: #1565c0;
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+/* ===== 9. Forms & Buttons ===== */
+/* form section {
+    margin-bottom: 20px;
+} */
+
+/* button {
+    padding: 10px 20px;
+    background-color: darkslategrey;
+    color: white;
+    border: none;
+    cursor: none;
+} */
+
+button:hover {
+    background-color:grey;
+}

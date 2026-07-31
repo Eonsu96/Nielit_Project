@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Attach to Chrome",
+            "name": "Attach to Microsoft Edge",
             "port": 9222,
             "request": "attach",
             "type": "chrome",

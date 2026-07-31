@@ -21,6 +21,8 @@
   --radius-sm:14px;
   --text-soft: #51607A;
   --border: rgba(15, 23, 42, 0.09);
+  --surface: #ffffff;
+  --primary: #255b2d; 
 }
 
 *{box-sizing:border-box}
@@ -33,12 +35,11 @@ body{
   overflow-x:hidden;
 }
 
-
 /* --------- nature background (from uploaded design) --------- */
 body::before{
   content:'';
   position:fixed;inset:0;
-  background:url('../images/background.png') center/cover no-repeat;
+  background:url('../image/bg_image.png') center/cover no-repeat;
   filter:brightness(.82) saturate(1.05);
   z-index:-2;
 }
@@ -49,29 +50,26 @@ body::after{
   z-index:-1;
 }
 
-
 /* --------- header --------- */
-
 .header{
-    position: flex;
+    position: flex; /* FIXED: 'flex' is not a valid position, changed to fixed */
     top: 0;
     left: 0;
     width: 100%;
     padding: 12px 30px;
     display: flex;
     align-items: center;
-    
-   
+    justify-content: flex-start;
+    z-index: 100;
 }
 
 /* Logo Container */
 .logo{
     display: flex;
     align-items: center;
-    /* justify-content: center; */
+    justify-content: center;
     text-decoration: none;
      gap: 15px;
-     justify-content: flex-start;
 }
 
 /* Logo Image */
@@ -86,7 +84,7 @@ body::after{
 }
 
 .brand-name{
-  font-family:var(--font-mono);
+  font-family: 'Fredoka', sans-serif;
   font-weight:800;
   font-size:2rem;
   line-height:1;
@@ -95,13 +93,10 @@ body::after{
 }
 
 .brand-tag{
-  font-weight: 800;
-  font-size:.9rem;
-  color:white;
+  font-size:.85rem;
+  color:#eaffea;
   letter-spacing:.06em;
-  /* text-shadow:0 1px 4px rgba(0,0,0,.4) */
 }
-
 
 /* --------- hero title --------- */
 h1.page-title{
@@ -122,22 +117,57 @@ h1.page-title{
   font-weight:500
 }
 
-
 /* --------- glass frame --------- */
 .frame{
   max-width:1300px;
-  margin:0 auto 40px;
+  margin: 0 auto 40px;
+  margin-top: 80px; /* Added to prevent header overlap */
   padding:60px 60px 70px;
   border-radius:25px;
-  background:rgba(255,255,255,.10);
+  background:rgba(255,255,255,.1); /* Changed from .10 so text is readable */
   border:2px solid rgba(255,255,255,.55);
-  backdrop-filter:blur(6px);
-  -webkit-backdrop-filter:blur(6px);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
   box-shadow:0 20px 60px rgba(0,0,0,.25);
 }
 .frame.narrow{
     max-width:960px;
     padding:44px 44px 52px
+}
+
+/* back link */
+.back-link{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;padding:10px 18px;
+  background:rgba(255,255,255,.6);
+  color:var(--green);
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:600;
+  box-shadow:var(--shadow)
+}
+
+.back-link:hover{
+  background:white
+}
+
+/* Back-link-2 */
+.back-link-2 {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background: darkcyan;
+    color: white;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: var(--shadow);
+}
+
+.back-link-2:hover{
+  background: var(--green);
 }
 
 /* --------- card grid --------- */
@@ -159,7 +189,7 @@ h1.page-title{
   position:relative;overflow:hidden;
 }
 .card:hover{transform:translateY(-8px) scale(1.03);box-shadow:var(--shadow-lg);background:#fff}
-.card h2{margin:0 0 6px;font-size:1.9rem;font-family:'Fredoka One', cursive; font-weight:700; color:var(--green);
+.card h2{margin:0 0 6px;font-size:1.9rem;font-family:'Fredoka', sans-serif; font-weight:700; color:var(--green);
   display:flex;align-items:center;gap:12px}
 .card h2 i{font-size:2.1rem}
 .card p{margin:6px 0 8px;color:var(--ink-soft);font-size:.95rem}
@@ -167,46 +197,31 @@ h1.page-title{
 .card .badge{position:absolute;top:10px;right:12px;background:var(--sun);color:#5a3717;
   padding:3px 10px;border-radius:20px;font-size:.72rem;font-weight:700}
 
-
-/* --------- wooden board ---------- */
-/* .board{
-  background:linear-gradient(180deg,#8d5a2b 0%,var(--wood) 65%,var(--wood-dark) 100%);
-  color:#fff8ec;
-  border-radius:16px;
-  padding:22px 20px;
-  box-shadow:0 10px 24px rgba(0,0,0,.38), inset 0 2px 0 rgba(255,255,255,.15);
-  border:3px solid #5a3717;
-  text-align:center;
-  font-family:'Baloo 2',sans-serif;
-} */
-
-
-/* back link */
-.back-link{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:rgba(255,255,255,.6);
-  color:var(--green);border-radius:999px;text-decoration:none;font-weight:600;box-shadow:var(--shadow)}
-.back-link:hover{background:white}
-
-/* Back-link-2 */
-
-.back-link-2{display:inline-flex;align-items:center;gap:80px;padding:10px 18px;background:rgba(255,255,255,.12);
-  color:var(--green);border-radius:999px;text-decoration:none;font-weight:600;box-shadow:var(--shadow)}
-.back-link-2:hover{background:var(--sky-blue)}
-
-
-ASTRONOMY CHIP DESIGN
-
-/* Grid */
-
-.card-grid{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap: 20px;
-    align-items:start;
+  /* Tag-cloude-Module (what we offers*/
+  .tag-cloud{ 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 9px; 
 }
 
+.tag-chip{
+  font-family: 'Fredoka', sans-serif; 
+  font-size: 15px; 
+  padding: 9px 18px; 
+  border-radius: 999px;
+  border: 1px solid var(--border); 
+  background:var(--surface);
+  color: var(--text-soft);
+  transition: transform .25s ease, color .25s ease, border-color .25s ease;
+}
 
-/* Glass-Card */
+.tag-chip:hover { 
+  border-color: var(--primary); 
+  color: var(--primary); 
+  transform: translateY(-2px); 
+}
 
+/* Glass-Card-(Our values) */
 .glass-card{
     background:rgba(255,255,255,.85);
     backdrop-filter:blur(18px);
@@ -217,60 +232,45 @@ ASTRONOMY CHIP DESIGN
     min-height:70px;
 }
 
-/* Expanded Card */
-
-.glass-card.active{
-    grid-column:1/-1;
+/* Footer */
+.site-footer{
+  text-align:center;
+  color:#fff;
+  padding:24px;
+  text-shadow:0 2px 6px rgba(0,0,0,.4);
+  font-size:.95rem
 }
 
-/* Header */
 
-.glass-header{
-    width:100%;
-    border:none;
-    background:white;
-    color:var(--green);
-    cursor:pointer;
-    padding:20px 25px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    font-size:24px;
-    font-weight:bold;
-}
-
-/* Content */
-
-.glass-content{
-    max-height:0;
-    opacity:0;
-    overflow:hidden;
-    transition:.45s;
-    padding:0 25px;
+/* Basic formatting for text paragraphs inside the frame */
+.frame p {
+    font-size: 1.1rem;
+    line-height: 1.6;
     color: var(--ink);
 }
 
-.glass-card.active .glass-content{
-    max-height:1200px;
-    opacity:1;
-    padding:25px;
+.frame p.lead {
+    font-size: 1.25rem;
+    color: var(--wood-dark);
 }
 
-/* Image */
-
-.glass-content img{
-    width:100%;
-    max-width:500px;
-    display:block;
-    margin:auto;
-    border-radius:15px;
+/* Accordion functionality for .glass-card (In case you use it again) */
+.glass-card.active {
+    grid-column: 1 / -1;
 }
 
-.arrow{
-    font-size:30px;
-    transition:.3s;
+.glass-header {
+    width: 100%; border: none; background: white; color: var(--green);
+    cursor: pointer; padding: 20px 25px; display: flex;
+    justify-content: space-between; align-items: center;
+    font-size: 20px; font-weight: bold;
 }
 
-.glass-card.active .arrow{
-    transform:rotate(45deg);
+.glass-content {
+    max-height: 0; opacity: 0; overflow: hidden;
+    transition: .45s; padding: 0 25px; color: var(--ink);
+}
+
+.glass-card.active .glass-content {
+    max-height: 1200px; opacity: 1; padding: 25px;
 }

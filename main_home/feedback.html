@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Feedback · Jr EduTube</title>
+  <link rel="stylesheet" href="../Geography/css/main_home.css">
+  <link rel="stylesheet" href="../Geography/css/responsive.css">
+</head>
+<body>
+    <!-- Logo section -->
+  <header class="header">
+        <a class="logo">
+            <img src="../main_home/image/logo.png" alt="Jr. EduTube Logo">
+            <div>
+              <div class="brand-name">EduTube</div>
+              <div class="brand-tag">Subjects</div>
+            </div>
+        </a>
+    </header>
+
+  <h1 class="page-title">💬 We ❤️ Feedback</h1>
+  <p class="subtitle">Your words help Jr EduTube grow better every day.</p>
+  <div style="text-align:center;margin:6px 0 12px"><a class="back-link" href="../main_home/home.html">🏠︎ Home</a></div>
+
+  <div class="frame narrow" style="max-width:640px">
+    <form data-form data-testid="feedback-form" novalidate>
+      <div class="grid-2">
+        <div>
+          <label style="display:block;margin:4px 0;font-weight:600;color:#255b2d">Your name</label>
+          <input class="je-inp" name="name" placeholder="(optional)" data-testid="fb-name">
+        </div>
+        <div>
+          <label style="display:block;margin:4px 0;font-weight:600;color:#255b2d">Email</label>
+          <input class="je-inp" name="email" type="email" placeholder="(optional)" data-testid="fb-email">
+        </div>
+      </div>
+      <label style="display:block;margin:14px 0 6px;font-weight:600;color:#255b2d">About which subject?</label>
+      <select class="je-inp" name="subject" data-testid="fb-subject">
+        <option value="geography">Geography</option>
+        <option value="zoology">Zoology</option>
+        <option value="mathematics">Mathematics</option>
+        <option value="general">General</option>
+      </select>
+      <label style="display:block;margin:14px 0 6px;font-weight:600;color:#255b2d">Rate your experience</label>
+      <div class="stars-input" data-stars data-testid="fb-stars">
+        ${[1,2,3,4,5].map(i=>`<button type="button" data-v="${i}" aria-label="${i} stars"><i class="bi bi-star"></i></button>`).join("")}
+      </div>
+      <label style="display:block;margin:14px 0 6px;font-weight:600;color:#255b2d">Message</label>
+      <textarea class="je-inp" name="message" rows="4" required maxlength="2000"
+                placeholder="Tell us what you loved or what we should build next…" data-testid="fb-msg"></textarea>
+
+      <div data-err style="color:#c62828;margin-top:10px;font-weight:600" data-testid="fb-error"></div>
+      <button type="submit" class="btn primary big" style="width:100%;margin-top:10px" data-testid="fb-submit">
+        <i class="bi bi-send"></i> Send Feedback
+      </button>
+    </form>
+
+    <div class="hr"></div>
+    <h3 style="color:#255b2d;font-family:'Baloo 2'">🌟 What others are saying</h3>
+    <div data-list data-testid="fb-list" style="display:flex;flex-direction:column;gap:10px"></div>
+  </div>
+
+  <style>
+    .je-inp{width:100%;padding:12px 14px;border-radius:12px;border:2px solid #cfe1ff;font-family:Fredoka;
+      font-size:1rem;background:#f5faff;color:#12447a;outline:none}
+    .je-inp:focus{border-color:#3e8f47;background:#fff}
+    .stars-input button{background:transparent;border:none;font-size:1.8rem;color:#cbd5e1;cursor:pointer;padding:0 4px}
+    .stars-input button.on i{color:#ffb400}
+    .fb-item{background:#fff;border-left:5px solid #4aa8ff;border-radius:10px;padding:10px 14px;box-shadow:var(--shadow)}
+    .fb-item .top{display:flex;justify-content:space-between;color:#255b2d;font-weight:600}
+    .fb-item .top .rt{color:#ffb400;letter-spacing:2px}
+  </style>
+
+  <footer class="site-footer">© 2026 Jr EduTube</footer>
+  </script>
+</body>
+</html>

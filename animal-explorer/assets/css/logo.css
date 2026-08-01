@@ -1,19 +1,74 @@
+/* ===========================================
+   LOGO
+=========================================== */
+
 .site-logo {
     position: fixed;
-    top: 15px;
-    left: 15px;
-    text-align: center;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
     z-index: 1000;
 }
 
+/* Logo image */
 .site-logo img {
-    width: 50px;
+    width: 45px;
     height: auto;
 }
 
-.subject {
-    margin-top: 5px;
-    font-size: 18px;
+/* Text beside the logo */
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* EduHub heading */
+.site-logo h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.3rem;
     font-weight: bold;
-    color: #000; 
+    color: #111;
+    line-height: 1.1;
+}
+
+/* Remove animal emojis added by tiny-explorers.css */
+.site-logo h1::before,
+.site-logo h1::after {
+    content: none;
+}
+
+/* Zoology text */
+.subject {
+    margin: 2px 0 0;
+    padding: 0;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #000;
+    line-height: 1.2;
+}
+
+/* Responsive */
+@media (max-width:768px) {
+
+    .site-logo {
+        top: 10px;
+        left: 10px;
+        gap: 8px;
+    }
+
+    .site-logo img {
+        width: 55px;
+    }
+
+    .site-logo h1 {
+        font-size: 1.6rem;
+    }
+
+    .subject {
+        font-size: 1rem;
+    }
 }

@@ -25,14 +25,25 @@
   --primary: #255b2d; 
 }
 
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-body{
-  font-family:'Fredoka',sans-serif;
-  background:var(--sky);
-  color:var(--ink);
-  min-height:100vh;
-  overflow-x:hidden;
+* {
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+
+body {
+    
+    font-family: 'Fredoka', sans-serif;
+    background: var(--sky);
+    color: var(--ink);
+    overflow-x: hidden;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+
 }
 
 /* --------- nature background (from uploaded design) --------- */
@@ -234,13 +245,14 @@ h1.page-title{
 
 /* Footer */
 .site-footer{
-  text-align:center;
-  color:#fff;
-  padding:24px;
-  text-shadow:0 2px 6px rgba(0,0,0,.4);
-  font-size:.95rem
-}
-
+    text-align:center;
+    color:#fff;
+    padding:24px;
+    text-shadow:0 2px 6px rgba(0,0,0,.4);
+    font-size:.95rem;
+    margin-top:auto;
+    bottom: 0;
+}   
 
 /* Basic formatting for text paragraphs inside the frame */
 .frame p {

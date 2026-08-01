@@ -1,8 +1,6 @@
-@media (max-width:1100px){
-
-.frame{
-    padding:30px;
-}
+@media (max-width:1024px){
+    
+.frame{padding:30px;}
 
 .grid,
 .grid-2,
@@ -13,80 +11,41 @@
 
 }
 
+/* For make table responsive */
+
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+        table-layout: fixed;
+    }
+    
+    th, td {
+        white-space: normal; 
+        word-break: break-word; 
+        padding: 6px; 
+        font-size: 0.85rem; 
+    }
+}
+
 @media (max-width:768px){
-
-.header{
-    padding:15px;
+    .header{padding:15px;}
+    .brand-name{font-size:1.4rem;}
+    .brand-tag{display:none;}
+    .page-title{font-size:1.8rem;}
+    .subtitle{font-size:1rem;}
+    .frame{padding:20px;}
+    .grid,.grid-2,.grid-4,.card-grid{grid-template-columns:1fr;}
+    .card{min-height:140px;}
+    .back-link{ width:auto;justify-content:center;}
 }
 
-.brand-name{
-    font-size:1.4rem;
-}
 
-.brand-tag{
-    display:none;
-}
-
-.page-title{
-    font-size:1.8rem;
-}
-
-.subtitle{
-    font-size:1rem;
-}
-
-.frame{
-    padding:20px;
-}
-
-.grid,
-.grid-2,
-.grid-4,
-.card-grid{
-    grid-template-columns:1fr;
-}
-
-.card{
-    min-height:140px;
-}
-
-.back-link{
-    width:40%;
-    justify-content:center;
-}
-
-.nav-links{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-}
-
-}
-
-@media (max-width:480px){
-
-.logo img{
-    width:38px;
-}
-
-.brand-name{
-    font-size:1.2rem;
-}
-
-.page-title{
-    font-size:1.5rem;
-}
-
-.subtitle{
-    font-size:0.95rem;
-}
-
-.frame{
-    padding:16px;
-}
-
-.card h2{
-    font-size:1.3rem;
-}
+@media (max-width:450px){
+.logo img{ width:38px;}
+.brand-name{font-size:1.2rem;}
+.page-title{font-size:1rem;}
+.subtitle{font-size:0.5rem;}
+.frame{padding:16px;}
+.card h2{font-size:1.3rem;}
 
 }

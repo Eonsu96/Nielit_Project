@@ -171,7 +171,7 @@ ul {
 
 .frame, main {
     max-width: min(1300px, 100%);
-    margin: 0 auto 40px;
+    margin: 0 10px 40px;
     padding:  clamp(18px, 4vw, 60px);
     border-radius: 25px;
     background: rgba(255, 255, 255, 0.1); /* Changed from solid white to allow blur */

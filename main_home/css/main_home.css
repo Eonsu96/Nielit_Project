@@ -25,14 +25,25 @@
   --primary: #255b2d; 
 }
 
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-body{
-  font-family:'Fredoka',sans-serif;
-  background:var(--sky);
-  color:var(--ink);
-  min-height:100vh;
-  overflow-x:hidden;
+* {
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+
+body {
+    
+    font-family: 'Fredoka', sans-serif;
+    background: var(--sky);
+    color: var(--ink);
+    overflow-x: hidden;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+
 }
 
 /* --------- nature background (from uploaded design) --------- */
@@ -118,22 +129,18 @@ h1.page-title{
 }
 
 /* --------- glass frame --------- */
-.frame{
-  max-width:1300px;
-  margin: 0 auto 40px;
-  margin-top: 80px; /* Added to prevent header overlap */
-  padding:60px 60px 70px;
-  border-radius:25px;
-  background:rgba(255,255,255,.1); /* Changed from .10 so text is readable */
-  border:2px solid rgba(255,255,255,.55);
-  backdrop-filter:blur(10px);
-  -webkit-backdrop-filter:blur(10px);
-  box-shadow:0 20px 60px rgba(0,0,0,.25);
+.frame, main {
+    max-width: min(1300px, 100%);
+    margin: 0 10px 40px;
+    padding:  clamp(18px, 4vw, 60px);
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1); /* Changed from solid white to allow blur */
+    border: 2px solid rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
 }
-.frame.narrow{
-    max-width:960px;
-    padding:44px 44px 52px
-}
+
 
 /* back link */
 .back-link{
@@ -234,13 +241,14 @@ h1.page-title{
 
 /* Footer */
 .site-footer{
-  text-align:center;
-  color:#fff;
-  padding:24px;
-  text-shadow:0 2px 6px rgba(0,0,0,.4);
-  font-size:.95rem
-}
-
+    text-align:center;
+    color:#fff;
+    padding:24px;
+    text-shadow:0 2px 6px rgba(0,0,0,.4);
+    font-size:.95rem;
+    margin-top:auto;
+    bottom: 0;
+}   
 
 /* Basic formatting for text paragraphs inside the frame */
 .frame p {

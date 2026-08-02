@@ -92,14 +92,14 @@ body::after {
   font-weight:700;
   font-size:2rem;
   line-height:1;
-  color:#fff;
+  color:whitesmoke;
   text-shadow:0 2px 8px rgba(0,0,0,.75)
 }
 
 .brand-tag{
   font-size:.9rem;
   font-weight: 500;
-  color:#0a4e0a;
+  color:whitesmoke;
   letter-spacing:.06em;
 }
 

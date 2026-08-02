@@ -244,17 +244,7 @@ h1.page-title{
     transition:.45s;
     min-height:70px;
 }
-
-/* Footer */
-.site-footer{
-    text-align:center;
-    color:#fff;
-    padding:24px;
-    text-shadow:0 2px 6px rgba(0,0,0,.4);
-    font-size:.95rem;
-    margin-top:auto;
-    bottom: 0;
-}   
+ 
 
 /* Basic formatting for text paragraphs inside the frame */
 .frame p {
@@ -334,3 +324,14 @@ h1.page-title{
   box-shadow:var(--shadow-lg);
   background:var(--leaf)
 }
+
+/* Footer */
+.site-footer{
+    text-align:center;
+    color:#fff;
+    padding:24px;
+    text-shadow:0 2px 6px rgba(0,0,0,.4);
+    font-size:.95rem;
+    margin-top:auto;
+    bottom: 0;
+}  

@@ -2,73 +2,108 @@
    LOGO
 =========================================== */
 
-.site-logo {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    z-index: 1000;
+.site-logo{
+
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    gap:10px;
+
+    width:100%;
+
+    margin-bottom:18px;
 }
 
-/* Logo image */
-.site-logo img {
-    width: 45px;
-    height: auto;
+.site-logo img{
+
+    width:55px;
+    height:auto;
+
+    flex-shrink:0;
 }
 
-/* Text beside the logo */
-.logo-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.logo-text{
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 }
 
-/* EduHub heading */
-.site-logo h1 {
-    margin: 0;
-    padding: 0;
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: #111;
-    line-height: 1.1;
+.logo-title{
+
+    font-size:1.5rem;
+    font-weight:bold;
+    color:#fff;
+
+    line-height:1.1;
 }
 
-/* Remove animal emojis added by tiny-explorers.css */
-.site-logo h1::before,
-.site-logo h1::after {
-    content: none;
+.subject{
+
+    margin-top:2px;
+
+    font-size:0.9rem;
+    font-weight:bold;
+
+    color:#fff;
 }
 
-/* Zoology text */
-.subject {
-    margin: 2px 0 0;
-    padding: 0;
-    font-size: 0.8rem;
-    font-weight: bold;
-    color: #000;
-    line-height: 1.2;
-}
+/* ===========================
+   Tablet
+=========================== */
 
-/* Responsive */
-@media (max-width:768px) {
+@media (max-width:768px){
 
-    .site-logo {
-        top: 10px;
-        left: 10px;
-        gap: 8px;
+    .site-logo{
+
+        gap:8px;
+
+        margin-bottom:15px;
     }
 
-    .site-logo img {
-        width: 55px;
+    .site-logo img{
+
+        width:48px;
     }
 
-    .site-logo h1 {
-        font-size: 1.6rem;
+    .logo-title{
+
+        font-size:1.25rem;
     }
 
-    .subject {
-        font-size: 1rem;
+    .subject{
+
+        font-size:0.8rem;
     }
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width:480px){
+
+    .site-logo{
+
+        gap:6px;
+
+        margin-bottom:12px;
+    }
+
+    .site-logo img{
+
+        width:42px;
+    }
+
+    .logo-title{
+
+        font-size:1.1rem;
+    }
+
+    .subject{
+
+        font-size:0.75rem;
+    }
+
 }

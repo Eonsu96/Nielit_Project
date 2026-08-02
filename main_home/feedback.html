@@ -19,49 +19,40 @@
         </a>
     </header>
 
-  <h1 class="page-title">💬 We ❤️ Feedback</h1>
+  <h1 class="page-title">💬 Feedback</h1>
   <p class="subtitle">Your words help Jr EduHub grow better every day.</p>
-  <div style="text-align:center;margin:6px 0 12px"><a class="back-link" href="../main_home/home.html">🏠︎ Home</a></div>
+  <div style="text-align:center; margin:6px 0 12px"><a class="back-link" href="../main_home/home.html">🏠︎ Home</a></div>
 
   <div class="frame narrow" style="max-width:640px">
     <form action="https://formsubmit.co/nielit-project-feedback@googlegroups.com" method="POST">
       <div class="grid-2">
         <div>
-          <label style="display:block;margin:4px 0;font-weight:600;color:#255b2d">Your name</label>
-          <input class="je-inp" name="name" placeholder="(Full Name)" data-testid="fb-name">
+          <label class="form-label">Your name</label>
+          <input class="input" name="name" placeholder="(Your Name)" required data-testid="fb-name">
         </div>
         <div>
-          <label style="display:block;margin:4px 0;font-weight:600;color:#255b2d">Email</label>
-          <input class="je-inp" name="email" type="email" placeholder="(Your Email)" required data-testid="fb-email">
+          <label class="form-label">Email</label>
+          <input class="input" name="email" type="email" placeholder="(Your Email)" required data-testid="fb-email">
         </div>
       </div>
-      <label style="display:block;margin:14px 0 6px;font-weight:600;color:#255b2d">About which subject?</label>
-      <select class="je-inp" name="subject" data-testid="fb-subject">
+      <label class="form-label">About which subject?</label>
+      <select class="input" name="subject"  required data-testid="fb-subject">
+        <option value="" disabled selected>Select a subject</option>
         <option value="geography">Geography</option>
         <option value="zoology">Zoology</option>
         <option value="mathematics">Mathematics</option>
         <option value="general">General</option>
       </select>
-      <label style="display:block;margin:14px 0 6px;font-weight:600;color:#255b2d">Message</label>
-      <textarea class="je-inp" name="message" rows="4" required maxlength="2000"
-                placeholder="Tell us what you loved or what we should build next…" data-testid="fb-msg"></textarea>
+      
+      <label class="form-label">Message</label>
+      <textarea class="input" name="message" rows="4" required maxlength="2000"
+                placeholder="Tell us what you loved, your experience, technical issues or what we should build next…" data-testid="fb-msg"></textarea>
 
-      <div data-err style="color:#c62828;margin-top:10px;font-weight:600" data-testid="fb-error"></div>
-      <button type="submit" class="btn primary big" style="width:100%;margin-top:10px" data-testid="fb-submit">
+      <button type="submit" class="sub-btn" data-testid="fb-submit">
         <i class="bi bi-send"></i> Send Feedback
       </button>
     </form>
-
-  <style>
-    .je-inp{width:100%;padding:12px 14px;border-radius:12px;border:2px solid #cfe1ff;font-family:Fredoka;
-      font-size:1rem;background:#f5faff;color:#12447a;outline:none}
-    .je-inp:focus{border-color:#3e8f47;background:#fff}
-    .fb-item{background:#fff;border-left:5px solid #4aa8ff;border-radius:10px;padding:10px 14px;box-shadow:var(--shadow)}
-    .fb-item .top{display:flex;justify-content:space-between;color:#255b2d;font-weight:600}
-    .fb-item .top .rt{color:#ffb400;letter-spacing:2px}
-  </style>
-
-  
+  </div>
   </script>
   <!-- Footer -->
         <footer class="site-footer">

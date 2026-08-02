@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css');
 
 :root{
   --sky:#eef8ff;
@@ -286,4 +287,50 @@ h1.page-title{
 
 .glass-card.active .glass-content {
     max-height: 1200px; opacity: 1; padding: 25px;
+}
+
+/* Form */
+
+.form-label{
+  display:block;
+  margin:14px 0 6px;
+  font-weight:600;
+  color: var(--green)
+}
+
+.input{
+  width:100%;
+  padding:12px 14px;
+  border-radius:12px;
+  border:2px solid #cfe1ff;
+  font-family:Fredoka; 
+  font-size:1rem;
+  background:#f5faff;
+  color:#12447a;
+  outline:none
+}
+
+.sub-btn{
+  display:inline-flex;
+  width: 100%;
+  margin-top:10px;
+  justify-content: center;
+  align-items:center;
+  /* gap:8px; */
+  padding:12px 18px;
+  background:var(--green);
+  color:#fff;
+  border:none;
+  border-radius:999px;
+  font-family:Fredoka;
+  font-size:1rem;
+  font-weight:600;
+  cursor:pointer;
+  transition:.25s ease;
+}
+
+.sub-btn:hover{
+  transform:translateY(-5px) scale(1.03);
+  box-shadow:var(--shadow-lg);
+  background:var(--leaf)
 }

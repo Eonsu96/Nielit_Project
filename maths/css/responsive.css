@@ -30,7 +30,7 @@
 @media (max-width:768px){
     .header{padding:15px;}
     .brand-name{font-size:1.4rem;}
-    .brand-tag{display:none;}
+    .brand-tag{display:flex;}
     .page-title{font-size:1.8rem;}
     .subtitle{font-size:1rem;}
     .frame{padding:20px;}

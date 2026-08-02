@@ -171,7 +171,7 @@ ul {
 
 .frame, main {
     max-width: min(1300px, 100%);
-    margin: 0 10px 40px;
+    margin: 0 auto 40px;
     padding:  clamp(18px, 4vw, 60px);
     border-radius: 25px;
     background: rgba(255, 255, 255, 0.1); /* Changed from solid white to allow blur */
@@ -194,7 +194,7 @@ main.glass-effect {
 
 .card {
     width: 100%;
-    min-height: 150px;
+    min-height: 110px;
     padding: 22px 20px;
     text-decoration: none;
     color: var(--ink);
@@ -227,7 +227,7 @@ main.glass-effect {
     display: flex;
     align-items: center;
     gap: 12px;
-    border-bottom: none; /* overrides the global h2 blue line */
+    border-bottom: none;
 }
 
 .card h2 i { font-size: 2.1rem; }

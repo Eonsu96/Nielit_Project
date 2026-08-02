@@ -7,7 +7,7 @@
 @media (max-width:720px){
   .site-header{padding:14px 16px}
   .brand-name{font-size:1.3rem}
-  .brand-tag{display:none}
+  .brand-tag{display:auto}
   .frame{padding:26px 18px 34px}
   .grid,.grid-4,.grid-2,.quiz-options,.dd-wrap{grid-template-columns:1fr;gap:16px}
   .mem-grid{grid-template-columns:repeat(3,1fr)}

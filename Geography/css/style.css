@@ -122,18 +122,18 @@ h1.page-title{
   font-weight:500
 }
 
-
 /* --------- glass frame --------- */
-.frame, main {
-    max-width: min(1300px, 100%);
-    margin: 0 10px 40px;
-    padding:  clamp(18px, 4vw, 60px);
-    border-radius: 25px;
-    background: rgba(255, 255, 255, 0.1); /* Changed from solid white to allow blur */
-    border: 2px solid rgba(255, 255, 255, 0.55);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+.frame,
+main{
+    width: min(1300px, 95%);
+    margin: 0 auto 40px;
+    padding:18px;
+    border-radius:25px;
+    background:rgba(255,255,255,.1);
+    border:2px solid rgba(255,255,255,.55);
+    backdrop-filter:blur(6px);
+    -webkit-backdrop-filter:blur(6px);
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
 }
 
 /* --------- card grid --------- */
@@ -159,7 +159,7 @@ h1.page-title{
 /* Cards */
 
 .card{
-  min-height:150px;
+  min-height:110px;
   padding:22px 20px;
   text-decoration:none;
   color:var(--ink);

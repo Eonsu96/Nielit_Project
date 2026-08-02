@@ -22,14 +22,12 @@
   --radius-sm:14px;
 }
 
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-body{
-  font-family:'Fredoka',sans-serif;
-  background:var(--sky);
-  color:var(--ink);
-  min-height:100vh;
-  overflow-x:hidden;
+* {
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
 }
 
 /* --------- nature background --------- */
@@ -90,9 +88,10 @@ body::after{
 }
 
 .brand-tag{
-  font-size:.85rem;
-  color:#eaffea;
-  letter-spacing:.06em;
+    font-family: 'Fredoka', sans-serif;
+    font-size:.85rem;
+    color:#eaffea;
+    letter-spacing:.06em;
 }
 
 
@@ -167,7 +166,7 @@ h1.page-title{
 }
 
 .btn.big{
-    padding:16px 30px;
+    padding:16px 28px;
     font-size:1.1rem
 }
 
@@ -191,7 +190,8 @@ h1.page-title{
 .chip{
     display:inline-flex;
     align-items:center;
-    gap:6px;padding:6px 12px;
+    gap:8 px;
+    padding:6px 8px;
     border-radius:20px;
     background:rgba(255,255,255,.9);
     color:var(--green);
@@ -242,11 +242,4 @@ h1.page-title{
     padding:24px;
     text-shadow:0 2px 6px rgba(0,0,0,.4);
     font-size:.95rem
-}
-
-/* keyboard focus accessibility */
-:focus-visible{
-    outline:3px solid var(--sun);
-    outline-offset:3px;
-    border-radius:8px
 }

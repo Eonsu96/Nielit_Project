@@ -169,16 +169,17 @@ ul {
     background: rgba(255 255 255 0.6);
 }
 
-.frame, main {
-    max-width: min(1300px, 100%);
+.frame,
+main{
+    width: min(1300px, 95%);
     margin: 0 auto 40px;
-    padding:  clamp(18px, 4vw, 60px);
-    border-radius: 25px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid rgba(255, 255, 255, 0.55);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    padding:18px;
+    border-radius:25px;
+    background:rgba(255,255,255,.1);
+    border:2px solid rgba(255,255,255,.55);
+    backdrop-filter:blur(6px);
+    -webkit-backdrop-filter:blur(6px);
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
 }
 
 main.glass-effect {
@@ -220,7 +221,7 @@ main.glass-effect {
 
 .card h2 {
     margin: 0 0 6px;
-    font-size: font-size:clamp(1.3rem,5vw,1.9rem);
+    font-size:clamp(1.3rem,5vw,1.9rem);
     font-family: 'Fredoka', sans-serif;
     font-weight: 700;
     color: var(--green);

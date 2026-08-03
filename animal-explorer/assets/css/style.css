@@ -5,7 +5,7 @@
     background-repeat:no-repeat;
     background-size:cover;
     background-attachment:fixed;
-    font-family:cursive,sans-serif;
+    font-family: "Comic Sans MS","Trebuchet MS",Arial,sans-serif;
 }
 
 .indexheader{
@@ -187,4 +187,29 @@
 
     }
 
+}
+/* Three cards */
+.quick-links{
+    grid-column:1/-1;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:10px;
+}
+
+.quick-link{
+    text-decoration:none;
+    background:#ffffff;
+    color:#2e7d32;
+    padding:10px 20px;
+    border-radius:999px;
+    font-weight:bold;
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.quick-link:hover{
+    background:#eaf7e6;
+    transform:translateY(-2px);
 }

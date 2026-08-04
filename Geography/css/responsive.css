@@ -9,7 +9,7 @@
   .brand-name{font-size:1.7rem}
   .brand-tag{display:flex}
   .frame{padding:26px 18px 34px}
-  .grid,.grid-4,.grid-2,.quiz-options,.dd-wrap{grid-template-columns:1fr;gap:16px}
+  .grid,.grid-4,.grid-2,.dd-wrap{grid-template-columns:1fr;gap:16px}
   .mem-grid{grid-template-columns:repeat(3,1fr)}
   h1.page-title{font-size:1.5rem;margin:14px 8px}
   p.subtitle{font-size: 1.2rem;}

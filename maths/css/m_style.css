@@ -360,7 +360,7 @@ button:hover {
     background-color:rgba(255, 255, 255, 0.05);
 }
 
-footer{
+.site-footer{
     text-align:center;
     color:#fff;
     padding:24px;

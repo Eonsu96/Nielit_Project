@@ -1,7 +1,4 @@
-// ======================================
 // LIFE CYCLES
-// ======================================
-
 const gameSets = [
 
 {
@@ -58,11 +55,7 @@ const gameSets = [
 
 ];
 
-
-// ======================================
 // SELECT ELEMENTS
-// ======================================
-
 const gameTitle =
 document.getElementById("gameTitle");
 
@@ -93,11 +86,7 @@ document.getElementById("wrongSound");
 const winSound =
 document.getElementById("winSound");
 
-
-// ======================================
 // VARIABLES
-// ======================================
-
 let currentGame = 0;
 
 let score = 0;
@@ -116,11 +105,7 @@ gameSets.reduce(
 scoreBoard.textContent =
 "Score : 0 / " + totalStages;
 
-
-// ======================================
 // SHUFFLE FUNCTION
-// ======================================
-
 function shuffle(array){
 
     for(let i = array.length - 1; i > 0; i--){
@@ -137,11 +122,7 @@ function shuffle(array){
 
 }
 
-
-// ======================================
 // LOAD GAME
-// ======================================
-
 function loadGame(index){
 
     selectedItem = null;
@@ -159,11 +140,7 @@ function loadGame(index){
     const shuffled =
     shuffle([...stages]);
 
-
-    // -----------------------------
     // RESET SLOTS
-    // -----------------------------
-
     sequenceRows.forEach((row, i)=>{
 
         const slot =
@@ -192,11 +169,7 @@ function loadGame(index){
 
     });
 
-
-    // -----------------------------
     // CREATE STAGE CARDS
-    // -----------------------------
-
     shuffled.forEach(stage=>{
 
         const item =
@@ -218,20 +191,14 @@ function loadGame(index){
     setupGame();
 
 }
-// ======================================
-// GAME LOGIC
-// ======================================
 
+// GAME LOGIC
 function setupGame(){
 
     const dragItems =
     document.querySelectorAll(".drag-item");
 
-
-    // -----------------------------
     // SELECT A STAGE
-    // -----------------------------
-
     dragItems.forEach(item=>{
 
         item.addEventListener("click",function(){
@@ -250,11 +217,7 @@ function setupGame(){
 
     });
 
-
-    // -----------------------------
     // CLICK A SLOT
-    // -----------------------------
-
     sequenceSlots.forEach(slot=>{
 
         slot.onclick = function(){
@@ -324,11 +287,7 @@ function setupGame(){
 
 }
 
-
-// ======================================
 // NEXT BUTTON
-// ======================================
-
 nextButton.addEventListener("click",function(){
 
     currentGame++;
@@ -353,11 +312,7 @@ nextButton.addEventListener("click",function(){
 
 });
 
-
-// ======================================
 // CUSTOM ALERT
-// ======================================
-
 function showAlert(message){
 
     document.getElementById("alertText").textContent =
@@ -375,9 +330,5 @@ function closeAlert(){
 
 }
 
-
-// ======================================
 // START GAME
-// ======================================
-
 loadGame(currentGame);

@@ -1,7 +1,4 @@
-// ==========================
 // SELECT ELEMENTS
-// ==========================
-
 const dragItems = document.querySelectorAll(".drag-item");
 const dropZones = document.querySelectorAll(".big-zone");
 
@@ -15,11 +12,7 @@ const winSound = document.getElementById("winSound");
 let selectedItem = null;
 let score = 0;
 
-
-// ==========================
 // SHUFFLE ANIMALS
-// ==========================
-
 const dragContainer = document.querySelector(".drag-container");
 
 function shuffleAnimals() {
@@ -38,11 +31,7 @@ function shuffleAnimals() {
 
 shuffleAnimals();
 
-
-// ==========================
 // SELECT ANIMAL
-// ==========================
-
 dragItems.forEach(item => {
 
     item.addEventListener("click", function () {
@@ -59,11 +48,7 @@ dragItems.forEach(item => {
 
 });
 
-
-// ==========================
 // CLICK CATEGORY
-// ==========================
-
 dropZones.forEach(zone => {
 
     zone.addEventListener("click", function () {
@@ -115,11 +100,7 @@ dropZones.forEach(zone => {
 
 });
 
-
-// ==========================
 // WRONG ANSWER ALERT
-// ==========================
-
 function showAlert(message) {
 
     document.getElementById("alertText").textContent = message;

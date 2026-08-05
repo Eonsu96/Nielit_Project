@@ -1,7 +1,4 @@
-// ======================================
 // FOOD CHAINS
-// ======================================
-
 const foodChains = [
 
 {
@@ -81,11 +78,7 @@ const foodChains = [
 
 ];
 
-
-// ======================================
 // SELECT ELEMENTS
-// ======================================
-
 const gameTitle = document.getElementById("gameTitle");
 
 const dragContainer = document.getElementById("dragContainer");
@@ -114,22 +107,14 @@ document.getElementById("wrongSound");
 const winSound =
 document.getElementById("winSound");
 
-
-// ======================================
 // VARIABLES
-// ======================================
-
 let currentGame = 0;
 
 let score = 0;
 
 let selectedItem = null;
 
-
-// ======================================
 // TOTAL SCORE
-// ======================================
-
 const totalStages =
 foodChains.reduce(
 
@@ -142,11 +127,7 @@ foodChains.reduce(
 scoreBoard.textContent =
 "Score : 0 / " + totalStages;
 
-
-// ======================================
 // LOAD GAME
-// ======================================
-
 function loadGame(index){
 
     dragContainer.innerHTML = "";
@@ -161,9 +142,7 @@ function loadGame(index){
 
     gameTitle.textContent = game.title;
 
-
-    // ---------- Labels ----------
-
+    // Labels
     sequenceLabels.forEach((label, i) => {
 
         if(i < game.labels.length){
@@ -182,9 +161,7 @@ function loadGame(index){
 
     });
 
-
-    // ---------- Slots ----------
-
+    //Slots
     sequenceSlots.forEach((slot, i) => {
 
         slot.classList.remove("correct");
@@ -207,15 +184,11 @@ function loadGame(index){
 
     });
 
-
-    // ---------- Shuffle ----------
-
+    //Shuffle
     const shuffled =
     [...game.stages].sort(() => Math.random() - 0.5);
 
-
-    // ---------- Create Stage Cards ----------
-
+    //Create Stage Cards
     shuffled.forEach(stage => {
 
         const item =
@@ -246,10 +219,8 @@ function loadGame(index){
     });
 
 }
-// ======================================
-// SLOT CLICK EVENTS
-// ======================================
 
+// SLOT CLICK EVENTS
 sequenceSlots.forEach(slot => {
 
     slot.addEventListener("click", function(){
@@ -330,11 +301,7 @@ sequenceSlots.forEach(slot => {
 
 });
 
-
-// ======================================
 // NEXT BUTTON
-// ======================================
-
 nextButton.addEventListener("click", function(){
 
     currentGame++;
@@ -343,11 +310,7 @@ nextButton.addEventListener("click", function(){
 
 });
 
-
-// ======================================
 // ALERT FUNCTIONS
-// ======================================
-
 function showAlert(text){
 
     document.getElementById("alertText").textContent = text;
@@ -362,9 +325,5 @@ function closeAlert(){
 
 }
 
-
-// ======================================
 // START GAME
-// ======================================
-
 loadGame(currentGame);

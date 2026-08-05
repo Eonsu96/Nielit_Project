@@ -1,7 +1,4 @@
-// ==========================
 // SELECT ELEMENTS
-// ==========================
-
 const dragItems = document.querySelectorAll(".drag-item");
 const dropZones = document.querySelectorAll(".drop-zone");
 
@@ -15,10 +12,7 @@ const winSound = document.getElementById("winSound");
 let selectedItem = null;
 let score = 0;
 
-// ==========================
 // SHUFFLE WORDS
-// ==========================
-
 const dragContainer = document.querySelector(".drag-container");
 
 function shuffleWords() {
@@ -39,10 +33,7 @@ function shuffleWords() {
 
 shuffleWords();
 
-// ==========================
 // SELECT WORD
-// ==========================
-
 dragItems.forEach(item => {
 
     item.addEventListener("click", function () {
@@ -58,10 +49,7 @@ dragItems.forEach(item => {
 
 });
 
-// ==========================
 // CHECK ANSWER
-// ==========================
-
 dropZones.forEach(zone => {
 
     zone.addEventListener("click", function () {
@@ -121,10 +109,7 @@ dropZones.forEach(zone => {
 
 });
 
-// ==========================
 // CUSTOM ALERT
-// ==========================
-
 function showAlert(text) {
 
     document.getElementById("alertText").textContent = text;
